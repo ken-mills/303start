@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>303start.com</title>
+
+    <meta name="author" content="303start">
+    <meta name="keywords" content="employee team people engagement performance management supervisor system software coach player">
+
+    <meta name="Description" content="303Start provides employee engagement consulting, training and software."/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/default.css">
+
+    <!-- jQuery library	-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn-303").click(function (e) {
+                $(".btn-303").addClass('btn-default').removeClass('btn-primary');
+                $(this).addClass('btn-primary').removeClass('btn-default');
+                $(".popup303 p").hide();
+                var str = e.target.id;
+                var para_num =  str.substring(3);
+                var target_id = "#pp" + para_num;
+                $(target_id).fadeIn("slow");
+            });
+        });
+    </script>
+
+</head>
+</html>
+
+<body>
+
+<!-- Navigation -->
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top" onclick=$("#menu-close").click();>303start.com</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();>home</a>
+        </li>
+        <li>
+            <a href="#services" onclick=$("#menu-close").click();>team303</a>
+        </li>
+        <li>
+            <a href="#features" onclick=$("#menu-close").click();>features</a>
+        </li>
+        <li>
+            <a href="#news" onclick=$("#menu-close").click();>news</a>
+        </li>
+        <li>
+            <a href="#contact" onclick=$("#menu-close").click();>contact</a>
+        </li>
+    </ul>
+</nav>
+<header id="top" class="top-image fill home text-center">
+    <img src="images/303startNoTag.png" class="img-responsive img-rounded center-block">
+    <h2 class="tag-line">providing a framework and software to engage employees and teams.</h2>
+</header>
+
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<div id="services" class="container-fluid bg-primary fill">
+    <div class="row text-center">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h2>team303</h2>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="service-item">
+							<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-users fa-stack-1x text-primary"></i>
+						</span>
+                        <h4>
+                            <strong>Relationships</strong>
+                        </h4>
+                        <button id="btn1" class="btn btn-303 btn-default">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="service-item">
+							<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa fa-thumbs-up fa-stack-1x text-primary"></i>
+						</span>
+                        <h4>
+                            <strong>Simplicity</strong>
+                        </h4>
+                        <button id="btn2" class="btn btn-303 btn-default">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="service-item">
+							<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-futbol-o fa-stack-1x text-primary"></i>
+						</span>
+                        <h4>
+                            <strong>Fun</strong>
+                        </h4>
+                        <button id="btn3" class="btn btn-303 btn-default">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="service-item">
+							<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-cogs fa-stack-1x text-primary"></i>
+						</span>
+                        <h4>
+                            <strong>Custom</strong>
+                        </h4>
+                        <button id="btn4" class="btn btn-303 btn-default">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row (nested) -->
+        </div>
+        <!-- /.col-lg-10 -->
+    </div>
+    <!-- /.row -->
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-12">
+            <div class="popup303" title="Principles">
+                <!-- Relationships -->
+                <p id="pp1">
+                    A foundation for creating an excellent company is an investment in people. Knowledge, skill, and
+                    attitude are important competencies to develop and monitor. team303 does that but organizations
+                    often forget to invest in and nurture the relationships between people, between supervisors and
+                    employees, between executives and managers, or between coaches and players. The team303 design was based on
+                    this core principle. team303 provides tools to develop strong, transparent, mentoring relationships
+                    between people.
+                    </p>
+                <!-- Simplicity -->
+                <p id="pp2">
+                    Organizations everywhere including many in the Fortune 500 have decided to trash their bureaucratic,
+                    paper based, time sucking, performance managements systems. Why? Organizations are moving too fast.
+                    These systems were designed for a different era. Many organizations are now simply asking their
+                    managers and supervisors to meet with staff more frequently, communicate more, and create more time
+                    for mentoring but with what tools? How does your CEO know that this is actually happening? team303
+                    provides the toolbox to help supervisors engage with their team. team303 provides CEOs with a window
+                    into how their employees are interacting light, fun, non-threatening way.
+                    </p>
+                <!-- Fun -->
+                <p id="pp3">
+                    team303 provides an optional player / coach metaphor to take the work out of the language used to develop team
+                    players by engaging and motivating them in a different way.
+                    </p>
+                <p id="pp4">
+                    team303 has optional components that allow your organization to select and customize an employee
+                    engagement system that fits their culture.  You decide which components and features are right for
+                    your people.
+                    </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="table-responsive">
+    <table class="table table-303">
+        <tbody>
+            <tr>
+                <td><i class="fa fa-eye fa-3x text-primary"></i></td>
+                <td><strong>pre-game</strong></td>
+                <td>
+                    the pre-game tool provides coaches and players with a template for a pre-game meeting agenda at the
+                    beginning of the year. a set of simple questions that focus on how both can work together more
+                    effectively. you can customize the template for your organization. capture notes to prepare for the
+                    meeting.
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<div id="features" class="container-fluid">
+    <div class="row text-center">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h2 class="text-primary">components and features</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-eye fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">pre-game</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                this tool provides coaches and players with a template for a pre-game meeting agenda at the
+                beginning of the year. a set of simple questions that focus on how both can work together more
+                effectively. you can customize the template for your organization. capture notes to prepare for the
+                meeting.
+                </p>
+        </div>
+    </div>
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-futbol-o fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">winning</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                a simple way to capture player goals. wse this tool to promote transparent communication and discussion.
+                pre-set character limits and instructions that you can customize. no paper forms.
+                </p>
+        </div>
+    </div>
+
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-graduation-cap fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">training camp</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                    identify and record player training goals to help your organization build an inventory of knowledge and skills
+                </p>
+        </div>
+    </div>
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-calendar-check-o fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">huddle</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                    quickly document results of frequent discussions. how are we working together? how are you
+                    progressing toward your organizational and training goals? how can I help? what is in your way?
+                    how is your innovation progressing?
+                    don't wait until the end of the year to find out when its too late.
+                </p>
+        </div>
+    </div>
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-lightbulb-o fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">ideas</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                innovative ideas can be nurtured in more than just a suggestion box.  players like to know their ideas
+                are being heard and shared. players need to understand the steps required to make new product ideas a
+                reality. this tool provides a simple framework for vetting and supporting ideas within your
+                organization.
+                </p>
+        </div>
+    </div>
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-comments fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">river</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                reward your employees for engaging with team303. the river generates a stream of activity and a point
+                system that promotes engagement, communication, and player development.
+                </p>
+        </div>
+    </div>
+    <div class="row feature-row">
+        <div class="col-xs-12 col-sm-2 text-right">
+            <i class="fa fa-line-chart fa-4x text-primary feature-icon"></i>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <h3 class="feature-title">information</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+                <p>
+                your ceo still wants to know who is talking, who is growing. capture an inventory of skills available and skill being developed.
+                </p>
+        </div>
+    </div>
+</div>
+
+
+<div id="news" class="call-out">
+    <div class="text-vertical-center news">
+        <h2>team303 release planned for early 2017. Join our mailing list.</h2>
+    </div>
+</div>
+
+<div id="contact" class="container-fluid fill">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h4><strong>Contact 303start</strong>
+            </h4>
+            <ul class="list-unstyled">
+                <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:info@303start.com">info@303start.com</a>
+                </li>
+            </ul>
+            <br>
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; 303Start.com 2016</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function () {
+        $("a[href*='#']:not([href='#'])").click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+</body>
