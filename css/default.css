@@ -18,6 +18,18 @@ hr {
     #circle2 {
         display: none;
     }
+    #crelat1 {
+        display: none;
+    }
+    #csimple1 {
+        display: none;
+    }
+    #cfun1 {
+        display: none;
+    }
+    #cgears1 {
+        display: none;
+    }
 }
 
 .container-fluid {
@@ -178,6 +190,21 @@ hr {
 	margin-top: 50px;
 }
 
+#crelat1{
+	background: url(../images/handshake-mw.jpg) no-repeat;
+}
+#csimple1{
+	background: url(../images/lines.png) no-repeat;
+}
+#cfun1{
+	background: url(../images/flip_flops_beach.png) no-repeat;
+	background-position:-100px -75px;
+}
+#cgears1{
+	background: url(../images/gear.png) no-repeat;
+	background-position:-50px -0px;
+}
+
 .circle
 {
 	width:150px;
@@ -185,8 +212,8 @@ hr {
 	border-radius:50%;
 	font-size:20px;
 	font-weight: bold;
-	color:black;
-	line-height:150px;
+	color:white;
+	line-height:100px;
 	text-align:center;
 	background:white;
 	margin:auto;
@@ -211,7 +238,7 @@ hr {
 
 
 .btn-spacing{
-	padding-top:20px;
+	padding-bottom:20px;
 }
 
 .popup303{
