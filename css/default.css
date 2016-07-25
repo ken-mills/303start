@@ -140,9 +140,7 @@ hr {
 /* fill is used to make home and about pages full screen however if display drops below the max-width parameter
    set heights to default values so the home page text does not run into the next section */
 @media (max-width:750px) {
-	.history {
-		background-image: none;
-	}
+
 	.fill{
 		width:100%;
 		height:initial;
@@ -152,7 +150,8 @@ hr {
 }
 
 .top-image img{
-	width: 40%;
+	max-width: 100%;
+	max-height: 80%;
 	align-self: center;
 }
 
