@@ -84,21 +84,21 @@
             <hr>
             <div class="row" style="max-height: 20%">
                 <div class="col-xs-12 col-sm-3">
-                    <img src="images/connectgreen.jpg" class="img-responsive img-circle center-block icon-303">
+                    <img id="crelat1" src="images/connectgreen.jpg" class="img-responsive img-circle center-block icon-303">
                     <h4>relationships</h4>
                     <div class="btn-spacing">
                         <button id="btn1" class="btn btn-303 btn-default">learn more</button>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <img src="images/treeb.jpg" class="img-responsive img-circle center-block icon-303" >
+                    <img id="csimple1" src="images/treeb.jpg" class="img-responsive img-circle center-block icon-303" >
                     <h4>simplicity</h4>
                     <div class="btn-spacing">
                         <button id="btn2" class="btn btn-303 btn-default">learn more</button>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <img src="images/fireworkgreen.jpg" class="img-responsive img-circle center-block icon-303">
+                    <img id="cfun1" src="images/fireworkgreen.jpg" class="img-responsive img-circle center-block icon-303">
                     <h4>fun</h4>
                     <div class="btn-spacing">
                         <button id="btn3" class="btn btn-303 btn-default">learn more</button>
@@ -162,7 +162,7 @@
     <div class="col-sm-12">
     <div class="table-responsive">
 
-    <table class="table" align="center" summary="Lists of components and features of team303. Pictures coming soon.">
+    <table class="table" align="center" summary="List of team303 components and features">
         <tbody>
             <tr>
                 <td style="vertical-align:middle"><i class="fa fa-eye fa-3x text-primary"></i></td>
@@ -243,7 +243,7 @@
 </div>
 
 
-<div id="news" class="call-out">
+<div id="news" class="call-out" style="background-image: url('{{ asset('images/CycleRoad1080.jpg')}}')">
     <div class="text-vertical-center news">
         <h2>team303 release coming soon<br>want to learn more? call 484.886.4263 </h2>
     </div>
@@ -253,7 +253,7 @@
 
     <div id="bio" class="row">
         <div class="col-xs-12 col-md-4">
-            <div id="circle2" class="circle2" ></div>
+            <div id="circle2" class="circle2" style="background-image: url('{{ asset('images/img5524a2.jpg')}}')"></div>
         </div>
 
         <div class="col-xs-12 col-md-8">
@@ -282,7 +282,6 @@
                 <p>484.886.4263</p>
             <br>
             <div id="footer">
-                <hr class="small">
                 <p class="text-muted">Copyright &copy; 303Start.com 2016</p>
             </div>
         </div>

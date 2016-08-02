@@ -162,7 +162,6 @@ hr {
 	height: 100%;
 	min-height: 750px;
 	color: #fff;
-	background: url(../../images/CycleRoad1080.jpg) no-repeat center center scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -196,7 +195,6 @@ hr {
 	border-radius:50%;
 	-webkit-border-radius: 350px;
 	-moz-border-radius: 350px;
-	background: url(../../images/img5524a2.jpg) no-repeat;
 	background-size:502px 380px;
 	background-position:-70px 0px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
@@ -206,7 +204,7 @@ hr {
 
 
 .btn-spacing{
-	padding-bottom:20px;
+	margin-bottom:20px;
 }
 
 .popup303{
@@ -214,6 +212,7 @@ hr {
 }
 
 .popup303 p{
+	margin-top:10%;
 	display: none;
 	font-size: large;
 	color:#e1ff8f;
@@ -262,7 +261,7 @@ hr {
 }
 
 #footer{
-	padding-top:50px;
+	margin-top:10%;
 	text-align: center;
 }
 
