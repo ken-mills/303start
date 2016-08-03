@@ -167,6 +167,10 @@ hr {
 	background-size: cover;
 	-o-background-size: cover;
 }
+
+.col-sm-offset-right-10 {
+  margin-right: 83.33333333%;
+}
 .call-out h2{
 	padding-top: 60px;
 }

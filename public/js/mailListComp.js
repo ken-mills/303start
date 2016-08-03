@@ -11924,7 +11924,12 @@ Vue.component('fan303', MailList);
 
 new Vue({
 
-  el: '#maillist-app'
+  el: '#maillist-app',
+
+  ready: function ready() {
+
+    console.log('Vue is ready!');
+  }
 
 });
 
@@ -11937,30 +11942,51 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = {
+
+    props: ['baseUrl'],
+
     data: function data() {
         return {
-            firstName: '',
-            lastName: '',
-            email: ''
+            firstName: 'Ken',
+            lastName: 'Mills',
+            email: 'ken@pkmills.com'
         };
     },
 
 
     ready: function ready() {
 
-        console.log('maillist is ready.');
+        console.log('maillist is ready!');
         console.log(this.baseUrl);
+        console.log(this.email);
     },
 
     http: {
         headers: {
             'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
         }
+    },
+
+    methods: {
+        submitFan: function submitFan(e) {
+
+            var url = this.baseUrl + '/fan';
+
+            console.log('Sending mailing list request: ' + url);
+
+            this.$http.post(url, { 'first_name': this.firstName, 'last_name': this.lastName, 'email': this.email }).then(function (response) {
+                //success
+                alert("Thank you!");
+            }, function (response) {
+                //error
+                alert("There was a problem adding you to the mailing list. Sorry for the inconvenience. Please give us a call.");
+            });
+        }
     }
 
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div>\n    <h2>Join our mailing list!</h2>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div>\n    <h2>Join our mailing list!</h2>\n    <form role=\"form\" class=\"form-horizontal\" method=\"POST\" v-on:submit.prevent=\"submitFan\">\n      <div class=\"form-group\">\n        <label for=\"fName\" class=\"sr-only\">First Name:</label>\n        <div class=\"col-sm-4 col-sm-offset-4\">\n            <input type=\"text\" class=\"form-control\" id=\"fName\" placeholder=\"First name:\" v-model=\"firstName\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"lName\" class=\"sr-only\">Last Name:</label>\n        <div class=\"col-sm-4 col-sm-offset-4\">\n            <input type=\"text\" class=\"form-control\" id=\"lName\" placeholder=\"Last name:\" v-model=\"lastName\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"email\" class=\"sr-only\">Email:</label>\n        <div class=\"col-sm-4 col-sm-offset-4\">\n            <input type=\"text\" class=\"form-control\" id=\"email\" placeholder=\"Email:\" v-model=\"email\">\n        </div>\n      </div>\n       <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-4\">\n          <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n        </div>\n      </div>\n    </form>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

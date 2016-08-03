@@ -10,10 +10,15 @@ var MailList = require('./mailListComp.vue');
 
 Vue.component('fan303', MailList);
 
-
 new Vue({
 
 el:'#maillist-app',
+
+ready: function(){
+
+    console.log('Vue is ready!');
+
+}
 
 });
 
