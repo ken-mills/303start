@@ -7,6 +7,7 @@
     <meta name="author" content="303start">
     <meta name="keywords" content="employee team people engagement performance management supervisor system software coach player">
 
+
     <meta name="Description" content="303Start provides employee engagement consulting, training and software."/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,7 +82,6 @@
 <div id="services" class="container-fluid bg-primary fill">
     <div class="row text-center">
             <h2>team303</h2>
-            <hr>
             <div class="row" style="max-height: 20%">
                 <div class="col-xs-12 col-sm-3">
                     <img id="crelat1" src="images/connectgreen.jpg" class="img-responsive img-circle center-block icon-303">
@@ -246,6 +246,7 @@
 <div id="news" class="call-out" style="background-image: url('{{ asset('images/CycleRoad1080.jpg')}}')">
     <div class="text-vertical-center news">
         <h2>team303 release coming soon<br>want to learn more? call 484.886.4263 </h2>
+        @include('partials.mailinglist')
     </div>
 </div>
 

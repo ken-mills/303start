@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('layout');
 });
+
+
+Route::resource('fan', 'FanController',
+                ['only' => ['store']]
+);
+
