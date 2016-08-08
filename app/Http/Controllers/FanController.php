@@ -12,7 +12,6 @@ class FanController extends Controller
 {
     //
 
-
     public function store(Request $request){
 
 		$input = [
