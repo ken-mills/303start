@@ -2,9 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
-use App\Subscription;
 
-class DatabaseSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,10 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-		User::truncate();
-		Subscription::truncate();
-
-        $this->call(UsersTableSeeder::class);
+        //
+		factory(App\User::class, 10)->create();
     }
 }

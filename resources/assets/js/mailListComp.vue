@@ -62,11 +62,7 @@
         methods:{
             submitFan: function(e) {
 
-                var url = this.baseUrl + '/fan';
-
-                console.log('Sending mailing list request: ' + url);
-
-                this.$http.post(url, {'first_name': this.firstName, 'last_name': this.lastName, 'email': this.email, })
+                this.$http.post(this.baseUrl + '/fan', {'first_name': this.firstName, 'last_name': this.lastName, 'email': this.email, })
                         .then(function (response) {
                             //success
                             alert("Thank you!")

@@ -11970,11 +11970,7 @@ exports.default = {
     methods: {
         submitFan: function submitFan(e) {
 
-            var url = this.baseUrl + '/fan';
-
-            console.log('Sending mailing list request: ' + url);
-
-            this.$http.post(url, { 'first_name': this.firstName, 'last_name': this.lastName, 'email': this.email }).then(function (response) {
+            this.$http.post(this.baseUrl + '/fan', { 'first_name': this.firstName, 'last_name': this.lastName, 'email': this.email }).then(function (response) {
                 //success
                 alert("Thank you!");
             }, function (response) {
@@ -11996,9 +11992,9 @@ if (module.hot) {(function () {  module.hot.accept()
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
-    hotAPI.createRecord("_v-a2d22b90", module.exports)
+    hotAPI.createRecord("_v-33a89322", module.exports)
   } else {
-    hotAPI.update("_v-a2d22b90", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+    hotAPI.update("_v-33a89322", module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
 },{"vue":4,"vue-hot-reload-api":2,"vueify/lib/insert-css":5}]},{},[6]);

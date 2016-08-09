@@ -15,9 +15,8 @@ Route::get('/', function () {
     return view('layout');
 });
 
- Route::resource('fan', 'FanController',
-				['only' => ['store']]
-);
+ Route::resource('sub', 'SubscriptionController',
+				['only' => ['store','destroy']]);
 
 
 
