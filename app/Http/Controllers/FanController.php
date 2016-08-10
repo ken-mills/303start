@@ -12,19 +12,19 @@ class FanController extends Controller
 {
     //
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
-		$input = [
-		 'email' => $request->input('email'),
-		 'first_name' => $request->input('first_name'),
-		 'last_name' => $request->input('last_name'),
-		];
+        $input = [
+         'email' => $request->input('email'),
+         'first_name' => $request->input('first_name'),
+         'last_name' => $request->input('last_name'),
+        ];
 
-		$new_user = User::create($input);
+        $new_user = User::create($input);
 
-		Log::debug('New User created, Id:'.$new_user->last_name);
+        Log::debug('New User created, Id:'.$new_user->last_name);
 
-		return response()->json($new_user,200);
+        return response()->json($new_user, 200);
     }
-
 }
