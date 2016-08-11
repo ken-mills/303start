@@ -1,6 +1,6 @@
 var elixir = require('laravel-elixir');
 
-require ('laravel-elixir-vueify');
+require('laravel-elixir-vue');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,5 +14,6 @@ require ('laravel-elixir-vueify');
  */
 
 elixir(function(mix) {
-    mix.browserify('mailListComp.js');
+    mix.sass('app.scss')
+       .webpack('mailListComp.js');
 });

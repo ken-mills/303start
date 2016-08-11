@@ -12,11 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('layout');
+
+	$tok = substr( "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ,
+			mt_rand( 0 ,51 ) ,1 ) .substr( md5( time() ), 1);
+
+    return view('layout')->with('api_token',$tok);
 });
 
- Route::resource(
-     'fan',
-     'FanController',
-     ['only' => ['store']]
- );

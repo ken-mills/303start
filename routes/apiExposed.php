@@ -13,3 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+
+ Route::post('sub', 'SubscriptionController@store');
+ Route::delete('sub', 'SubscriptionController@destroy');
+
+ Route::post(
+ 	'log',
+	 function(Request $request){
+	 	Log::debug ($request->input('msg'));
+	 });
