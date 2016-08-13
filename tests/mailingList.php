@@ -11,6 +11,14 @@ class addUserToMailingList extends TestCase
      *
      * @return void
      */
+
+	public function setUp()
+	{
+		parent::setUp();
+
+		$this->artisan('db:seed');
+	}
+
     public function testAdd()
     {
         $user = factory(App\User::class)->make();

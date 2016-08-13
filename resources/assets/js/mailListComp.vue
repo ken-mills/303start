@@ -3,7 +3,7 @@
         <h2>Join our mailing list!</h2>
         <form role="form" class="form-horizontal" method="POST" v-on:submit.prevent="submitFan">
 
-          <input type="hidden" id="hpot" placeholder="This field is not required. Please ignore." v-model="hPot" maxlength="1">
+          <input type="hidden" id="hpot" placeholder="This field is not required. Please ignore." v-model="hPot" maxlength="5">
 
           <div class="col-sm-4 col-sm-offset-4">
               <alert303 v-show="showAlert"></alert303>
@@ -51,10 +51,10 @@
 
         data(){
             return {
-                firstName: 'Ken',
-                lastName: 'Mills',
-                email: 'pk@pkmills.com',
-                hpot: '',
+                firstName: '',
+                lastName: '',
+                email: '',
+                hPot: '',
                 showAlert: false,
             }
         },
@@ -79,22 +79,68 @@
 
         methods: {
 
-            noHoney: function () {
+            checkForHoney: function ( pot ) {
 
-                if (this.hPot) {
+                if (pot) {
 
-                    //log honey pot request
-                    this.$http.post(this.baseUrl + '/api/log', {msg: "Honey pot had data, ignoring post request"})
-                            .then(function (response) {
-                                this.hpot = '';
-                            });
-
-                    console.log('has honey');
-                    return false;
+                    console.log('Found some honey');
+                    return true;
 
                 }
 
-                console.log('no honey');
+                return false;
+
+            },
+
+            validateEmail: function (email) {
+                if(email) {
+
+                    if( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+
+                    }else{
+
+                        return 'The email address does not appear to be valid. Please try again, thanks!';
+
+                    }
+
+                }else{
+
+                    return 'Please, enter an email address';
+                }
+
+                return null;
+
+            },
+
+            goodSubmission: function(){
+
+                var instance = this; //can't reference this in callbacks
+
+                if(this.checkForHoney(this.hPot)) {
+
+                    this.$http.post(this.baseUrl + '/api/log', {msg: "Honey pot had data, ignoring post request"});
+
+                    this.hpot = '';
+
+                    return false; //Don't do anything.
+
+                }else{
+
+                    var msg = this.validateEmail(this.email);
+
+                    if(msg){
+
+                        instance.$broadcast('alert-msg', {
+                            'message': msg,
+                            'type': 'danger'
+                        });
+
+                        instance.showAlert = true;
+
+                        return false;
+
+                    }
+                }
 
                 return true;
 
@@ -102,32 +148,34 @@
 
             submitFan: function (e) {
 
-                if (this.noHoney()) {
+                var instance = this;
+
+                if(this.goodSubmission()){
+
+                    console.log("Submitting Fan!" + this.email);
 
                     this.$http.post(this.baseUrl + '/api/sub', {
                         'first_name': this.firstName,
                         'last_name': this.lastName,
                         'email': this.email,
                     })
-                            .then(function (response) {
-                                //success
-                                this.$broadcast('alert-msg', {
-                                    'message': "Thank you!",
-                                    'type': 'info'
-                                });
-                                this.showAlert = true;
-                            }, function (response) {
-                                //error
-                                this.$broadcast('alert-msg', {
-                                    'message': "There was a problem adding you to the mailing list. Sorry for the inconvenience. Please give us a call.",
-                                    'type': 'danger'
-                                });
-                                this.showAlert = true;
-                            });
+                    .then(function (response) {
+                        //success
+                        this.$broadcast('alert-msg', {
+                            'message': "Thank you " + instance.firstName + "!",
+                            'type': 'info'
+                        });
+                        this.showAlert = true;
+                    }, function (response) {
+                        //error
+                        this.$broadcast('alert-msg', {
+                            'message': response.data.email,
+                            'type': 'danger'
+                        });
+                        this.showAlert = true;
+                    });
 
                 }
-
-
             }
         }
 

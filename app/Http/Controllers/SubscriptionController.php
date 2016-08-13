@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\User;
 use App\Subscription;
+use App\Mail\Confirmation;
 use Log;
 
 use App\Http\Requests;
@@ -16,10 +18,12 @@ class SubscriptionController extends Controller
     public function store(Request $request){
 
 
+		//$rules = array('test' => array('size:5', 'regex:foo'));
+
 		$this->validate($request, [
 			'first_name' => 'required|max:255',
 			'last_name' => 'required|max:255',
-			'email' => 'required|unique:users|max:255',
+			'email' => 'bail|required|unique:users|max:255',
 		]);
 
 		$new_user = new User();
@@ -32,10 +36,14 @@ class SubscriptionController extends Controller
 		$new_user->password = bcrypt(str_random(10));
 		$new_user->save();
 
-		$subscription = new Subscription();
-		$subscription->user_id = $new_user->id;
-		$subscription->name = 'MAILING_LIST';
-		$subscription->save();
+		$subscription = $new_user->subscriptions()->create([
+			'name' => 'MAILING_LIST',
+		]);
+
+/*
+ *  Error using guzzle and mailable, json_encode in client.php
+ */
+	//	Mail::to($new_user)->send(new Confirmation($subscription,$new_user));
 
 		return response()->json($new_user,200);
     }

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('sparkpost', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'sparkpost'),
 
     /*
     |--------------------------------------------------------------------------
