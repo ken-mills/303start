@@ -2,15 +2,8 @@
 <html lang="en">
 <head>
 
-    <title>303start.com</title>
+    @include('meta')
 
-    <meta name="author" content="303start">
-    <meta name="keywords" content="employee team people engagement performance management supervisor system software coach player">
-
-
-    <meta name="Description" content="303Start provides employee engagement consulting, training and software."/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- for google -->
     <meta name="google-site-verification" content="UF2N5fe0hj823VyuK_mxYQtgzsDU_rHTQifcPPisAxc" />
     <!-- Latest compiled and minified CSS -->
@@ -41,7 +34,6 @@
     </script>
 
 </head>
-</html>
 
 <body>
 
@@ -72,7 +64,7 @@
     </ul>
 </nav>
 <header id="top" class="top-image fill home text-center">
-    <img src="images/303startNoTag.png" class="img-responsive img-rounded center-block">
+    <img src="{{asset('images/303startNoTag.png')}}" class="img-responsive img-rounded center-block">
     <h2 class="tag-line">providing a framework and software to engage employees and teams</h2>
 </header>
 
@@ -273,19 +265,8 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <h3><strong>Contact 303start</strong>
-            </h3>
-                <p> <a class="text-primary" href="mailto:info@303start.com">info@303start.com</a>
-                </p>
-                <p>484.886.4263</p>
-            <br>
-            <div id="footer">
-                <p class="text-muted">Copyright &copy; 303Start.com 2016</p>
-            </div>
-        </div>
-    </div>
+    @include('footer')
+
 </div>
 
 
@@ -320,3 +301,4 @@
     });
 </script>
 </body>
+</html>

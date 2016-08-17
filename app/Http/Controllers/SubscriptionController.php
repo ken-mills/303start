@@ -8,6 +8,7 @@ use App\User;
 use App\Subscription;
 use App\Mail\Confirmation;
 use Log;
+use Carbon\Carbon;
 
 use App\Http\Requests;
 
@@ -28,7 +29,7 @@ class SubscriptionController extends Controller
 
 		$new_user = new User();
 
-		Log::debug('store:request:last_name = '.$request->input('email'));
+		Log::debug('subscriptionController:store:email = '.$request->input('email'));
 
 		$new_user->email = $request->input('email');
 		$new_user->first_name = $request->input('first_name');
@@ -40,10 +41,10 @@ class SubscriptionController extends Controller
 			'name' => 'MAILING_LIST',
 		]);
 
-/*
- *  Error using guzzle and mailable, json_encode in client.php
- */
-	//	Mail::to($new_user)->send(new Confirmation($subscription,$new_user));
+		//all sparkmail must come from user in configured domain, 303start.com
+
+		Mail::to($new_user)
+			->send(new Confirmation($subscription,$new_user));
 
 		return response()->json($new_user,200);
     }
@@ -53,6 +54,22 @@ class SubscriptionController extends Controller
 			Subscription::find($request->input('id'))->delete();
 
 			return response()->json(array('deleted' => true),302);
+    }
+
+    public function update(Request $request, Subscription $subscription){
+
+
+		Log::debug('subscriptionController:update:subscription:id/user_id = '.$subscription->id .'/'.$subscription->user_id);
+		$subscription->confirmed_at = Carbon::now();
+		$subscription->save();
+
+		$user = User::find($subscription->user_id);
+
+		Mail::to($user)
+			->send(new Confirmed($subscription,$user));
+
+		return redirect()->route('home');
+
     }
 
 }

@@ -169,7 +169,7 @@
                     }, function (response) {
                         //error
                         this.$broadcast('alert-msg', {
-                            'message': response.data.email,
+                            'message': "Something happened. Please call and we will add you to our mailing list.",
                             'type': 'danger'
                         });
                         this.showAlert = true;

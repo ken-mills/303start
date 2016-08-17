@@ -1,0 +1,22 @@
+/*
+Built on Bootstrap 3 by Ken Mills
+index.html is divided into sections with Menu in right corner.
+*/
+html,body{height:100%;}
+
+body p{
+	font-size: large;
+	margin-right: 15%;
+}
+
+
+.top-image img{
+	max-width: 15%;
+	max-height: 15%;
+}
+
+#content{
+
+	padding: 20px;
+
+}

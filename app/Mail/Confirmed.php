@@ -5,29 +5,24 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Log;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-use App\Subscription;
 use App\User;
 
-class Confirmation extends Mailable
+class Confirmed extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subscription;
-
-    public $user;
-
+    private $user;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Subscription $subcription, User $user)
+    public function __construct(User $user)
     {
         //
-        $this->subscription = $subcription;
         $this->user = $user;
     }
 
@@ -38,12 +33,11 @@ class Confirmation extends Mailable
      */
     public function build()
     {
-
-		Log::debug('Confirmation:build:user = '.$this->user->email);
+		Log::debug('Confirmed:build:user = '.$this->user->email);
 
         return $this->from('postmaster@303start.com', '303start.com')
         ->bcc('admin@303start.com')
-        ->subject('Please confirm')
-        ->view('emails.confirmation')->with(['first_name' => $this->user->first_name, 'sub' => $this->subscription]);
+        ->subject('Thank you!')
+        ->view('emails.confirmed');
     }
 }
