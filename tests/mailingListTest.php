@@ -12,25 +12,27 @@ class MailingList extends TestCase
      * @return void
      */
 
+
+	use MailTesting;
+
 	public function setUp()
 	{
 		parent::setUp();
 
 		$this->artisan('db:seed');
+
 	}
 
     public function testAdd()
     {
+
         $user = factory(App\User::class)->make();
 
-		$this->json('POST', 'api/sub',$user->toArray())
-			->seeJsonStructure([
-                 'email',
-                 'first_name',
-                 'last_name',
-             ]);
-
-		$this->seeInDatabase('users', ['email' => $user->email]);
+		//try ->dump();
+		$this->json('POST', 'api/subscription',$user->toArray())
+				->seeJson([ 'email' => $user->email])
+				->seeInDatabase('users', ['email' => $user->email])
+				->seeEmailWasSent();
 
 		$same_user = App\User::where(['email' => $user->email])->first();
 
@@ -38,12 +40,13 @@ class MailingList extends TestCase
 
     }
 
+
     public function testRemove()
     {
 
-        $subscription = App\Subscription::first();
+        $subscription = App\Subscription::firstOrFail();
 
-		$this->json('DELETE','api/sub', array('_method' => 'delete', 'id' => $subscription->id ))
+		$this->json('DELETE','api/subscription', array('_method' => 'delete', 'id' => $subscription->id ))
 			->seeJsonEquals([
                  'deleted' => true
              ]);
@@ -54,11 +57,10 @@ class MailingList extends TestCase
 
     public function testUserExists(){
 
-    	$user = App\User::first();
+    	$user = App\User::firstOrFail();
 
-    	echo('Getting user name = '.$user->last_name);
 
-		$this->json('POST', 'api/sub',$user->toArray())
+		$this->json('POST', 'api/subscription',$user->toArray())
 			->seeJsonEquals([
                  'email' => ['The email has already been taken.']
              ]);

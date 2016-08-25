@@ -17,7 +17,7 @@ class CreateSubscritionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('name');
-            $table->dateTime('confirmed_at')->nullable();
+            $table->boolean('subscribed')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

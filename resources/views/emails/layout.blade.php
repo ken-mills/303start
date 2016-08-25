@@ -2,14 +2,28 @@
 <html lang="en">
 
 <head>
-@include('emails.head')
+
+    @include('head')
+
+    <link rel="stylesheet" href="{{asset('css/default_email.css')}}">
+
+
 </head>
 
 <body>
 
-@include('emails.banner')
+    <div id="header" class="container">
 
-@yield('content')
+        @include('emails.banner')
+
+    </div>
+
+
+    <div id="content" class="container">
+
+        @yield('content')
+
+    </div>
 
 </body>
 </html>

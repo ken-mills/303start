@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use Mail;
 use App\User;
 use App\Subscription;
 use App\Mail\Confirmation;
+use App\Mail\Confirmed;
 use Log;
 use Carbon\Carbon;
 
@@ -20,6 +21,8 @@ class SubscriptionController extends Controller
 
 
 		//$rules = array('test' => array('size:5', 'regex:foo'));
+
+		Log::debug('subscriptionController:store:Got here 1');
 
 		$this->validate($request, [
 			'first_name' => 'required|max:255',
@@ -40,13 +43,13 @@ class SubscriptionController extends Controller
 		$subscription = $new_user->subscriptions()->create([
 			'name' => 'MAILING_LIST',
 		]);
-
-		//all sparkmail must come from user in configured domain, 303start.com
-
+/*
+ *		5.3 version of mail
+ */
 		Mail::to($new_user)
 			->send(new Confirmation($subscription,$new_user));
 
-		return response()->json($new_user,200);
+		return response()->json($new_user);
     }
 
     public function destroy(Request $request){
@@ -65,10 +68,10 @@ class SubscriptionController extends Controller
 
 		$user = User::find($subscription->user_id);
 
-		Mail::to($user)
-			->send(new Confirmed($subscription,$user));
+//		Mail::to($user)
+//			->send(new Confirmed($user));
 
-		return redirect()->route('home');
+		return redirect()->route('confirmed');
 
     }
 

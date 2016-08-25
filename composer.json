@@ -9,7 +9,7 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "5.3.x-dev",
+        "laravel/framework": "5.3.0-RC1",
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
@@ -17,7 +17,8 @@
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
         "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
+        "symfony/dom-crawler": "3.1.*",
+        "barryvdh/laravel-ide-helper": "^2.2"
     },
     "autoload": {
         "classmap": [
@@ -30,7 +31,11 @@
     "autoload-dev": {
         "classmap": [
             "tests/TestCase.php"
+        ],
+        "files":[
+            "tests/MailTesting.php"
         ]
+
     },
     "scripts": {
         "post-root-package-install": [

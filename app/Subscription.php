@@ -28,6 +28,11 @@ class Subscription extends Model
         $this->attributes['name'] = strtoupper($value);
     }
 
+    public function scopeUserHas($query)
+    {
+        return $query->where('subscribed', '=', true);
+    }
+
     public function users(){
       return $this->belongsToMany('App\User');
     }

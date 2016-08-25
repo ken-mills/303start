@@ -15,7 +15,7 @@ class EmailConfirmationController extends Controller
 
     	$user = User::find($subscription->user_id);
 
-    	return view('emails.confirmation')->with(['first_name' => $user->first_name, 'sub' => $subscription->id]);
+    	return view('emails.confirmation')->with(['first_name' => $user->first_name, 'subscription' => $subscription->id]);
 
     }
 }

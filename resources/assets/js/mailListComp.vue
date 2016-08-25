@@ -154,7 +154,7 @@
 
                     console.log("Submitting Fan!" + this.email);
 
-                    this.$http.post(this.baseUrl + '/api/sub', {
+                    this.$http.post(this.baseUrl + '/api/subscription', {
                         'first_name': this.firstName,
                         'last_name': this.lastName,
                         'email': this.email,

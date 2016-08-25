@@ -22,12 +22,15 @@ Route::get('/', function () {
 })->name('home');
 
 //test route for displaying confirmation email
-Route::get('sub/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
-Route::put('subscription/{subscription}', 'SubscriptionController@update')->name('api.confirm');
+Route::get('subscription/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
+//web route for showing confirmed page
+Route::get('subscription/confirmed', 'EmailConfirmationController@confirmed')->name('confirmed');
+
+//web route for posting confirmation from email
+Route::get('register/confirm/{token}', 'Auth\RegisterController@confirmEmail')->name('register.confirm');
 
 
-//actual route for displaying confirmation page
-Route::get('sub/confirmed', function(){
-	return view('confirmed');
-});
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

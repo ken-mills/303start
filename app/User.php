@@ -13,8 +13,11 @@ use Notifiable;
      *
      * @var array
      */
+
+	private $token;
+
     protected $fillable = [
-        'name', 'email', 'password', 'first_name','last_name'
+        'name', 'email', 'password', 'first_name','last_name','verified'
     ];
 
     /**
@@ -23,8 +26,22 @@ use Notifiable;
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','token'
     ];
+
+	public function setEmailVerificationToken(){
+
+    	$this->token =  str_random(30);
+
+    	return $this->token;
+
+    }
+
+
+	public function scopeUnVerified($query)
+    {
+        return $query->where('verified', '=', false);
+    }
 
     public function subscriptions(){
         return $this->hasMany('App\Subscription');
