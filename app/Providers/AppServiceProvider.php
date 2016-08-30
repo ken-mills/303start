@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\User;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+       	User::creating(function($user){
+
+    		$user->token = str_random(30);
+
+    	});
+
     }
 
     /**

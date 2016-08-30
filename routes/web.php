@@ -18,7 +18,7 @@ Route::get('/', function () {
 	$tok = substr( "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ,
 			mt_rand( 0 ,51 ) ,1 ) .substr( md5( time() ), 1);
 
-    return view('layout')->with('api_token',$tok);
+    return view('layouts.site')->with('api_token',$tok);
 })->name('home');
 
 //test route for displaying confirmation email

@@ -7,7 +7,6 @@ use Mail;
 use App\User;
 use App\Subscription;
 use App\Mail\Confirmation;
-use App\Mail\Confirmed;
 use Log;
 use Carbon\Carbon;
 

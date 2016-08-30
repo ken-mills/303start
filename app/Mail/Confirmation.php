@@ -44,6 +44,6 @@ class Confirmation extends Mailable
         return $this->from('postmaster@303start.com', '303start.com')
         ->bcc('admin@303start.com')
         ->subject('Please confirm')
-        ->view('emails.confirmation')->with(['first_name' => $this->user->first_name, 'subscription' => $this->subscription->id]);
+        ->view('emails.confirmation')->with(['user' => $this->user, 'subscription' => $this->subscription->id]);
     }
 }

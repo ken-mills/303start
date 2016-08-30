@@ -10,35 +10,42 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
+    protected $num_users = 2;
+
     public function run()
 	{
-		// not verified, unsubscribed
-		factory(App\User::class, 3)
+		// not verified
+		factory(App\User::class, $this->num_users)
 			->create()
 			->each(function ($u) {
-					$u->subscriptions()->save(factory(App\Subscription::class, 'unsubscribed')->make());
+
+				$this->makeSubscriptionForThisUser($u);
+
 			});
 
-		// not verified, subscribed --should not be
-		factory(App\User::class, 3)
+		// verified
+		factory(App\User::class, 'verified' , $this->num_users)
 			->create()
 			->each(function ($u) {
-					$u->subscriptions()->save(factory(App\Subscription::class, 'subscribed')->make());
+				$this->makeSubscriptionForThisUser($u);
 			});
 
-		// verified, unsubscribed
-		factory(App\User::class, 'verified' , 3)
-			->create()
-			->each(function ($u) {
-					$u->subscriptions()->save(factory(App\Subscription::class, 'unsubscribed')->make());
-			});
+	}
 
-		// verified, subscribed
-		factory(App\User::class, 'verified' , 3)
-			->create()
-			->each(function ($u) {
-					$u->subscriptions()->save(factory(App\Subscription::class, 'subscribed')->make());
-			});
+	public function makeSubscriptionForThisUser($user){
 
+		//subscriptions for even numbered ids.
+		if(fmod($user->id,2) > 0){
+
+			$user->subscriptions()->save(factory(App\Subscription::class, 'subscribed')->make());
+
+		}
+		else{
+
+			$user->subscriptions()->save(factory(App\Subscription::class, 'unsubscribed')->make());
+
+		}
+
+		return;
 	}
 }

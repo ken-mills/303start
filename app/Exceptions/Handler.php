@@ -17,7 +17,7 @@ class Handler extends ExceptionHandler
         \Illuminate\Auth\AuthenticationException::class,
         \Illuminate\Auth\Access\AuthorizationException::class,
         \Symfony\Component\HttpKernel\Exception\HttpException::class,
-        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+//        \Illuminate\Database\Eloquent\ModelNotFoundException::class,
         \Illuminate\Validation\ValidationException::class,
     ];
 
@@ -31,7 +31,20 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        parent::report($e);
+		switch ($e){
+
+		case ($e instanceof ModelNotFoundException):
+
+			Log::warning($e);
+		    break;
+
+		default:
+
+			break;
+
+		}
+
+		parent::report($e);
     }
 
     /**

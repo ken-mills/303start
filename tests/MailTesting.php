@@ -51,7 +51,27 @@
 
 	 }
 
+	 protected function seeEmailContains($text, Swift_Message $message = null) {
 
+
+	 	$this->assertContains(
+	 		$text, $this->getEmail($message)->getBody(),
+			"The following text was not found: ".$text );
+
+		 return $this;
+
+	 }
+
+	 protected function seeEmailToken($token, Swift_Message $message = null) {
+
+
+	 	$this->assertContains(
+	 		$token, $this->getEmail($message)->getBody(),
+			"The requested token was not found.");
+
+		 return $this;
+
+	 }
 
 	 public function addEmail(Swift_Message $email){
 
@@ -86,7 +106,11 @@ class TestingMailEventListener implements Swift_Events_EventListener
 
 	 public function beforeSendPerformed($event)
 	 {
+
+//		 dd(get_class_methods($event->getMessage()));
+
 		 $this->test->addEmail($event->getMessage());
+
 	 }
 
 

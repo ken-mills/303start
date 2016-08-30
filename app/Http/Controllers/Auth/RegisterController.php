@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
+
+use App\User;
+use App\Mail\Confirmed;
 
 class RegisterController extends Controller
 {
@@ -69,9 +73,34 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function confirmEmail($token){
+    protected function confirmEmail($token){
 
-    	$user = User::whereToken()->find();
+    	$user = User::tokenEquals($token)->first();
+
+    	if(count($user)){
+
+			$this->setUserWasVerified($user);
+
+			Mail::to($user)
+				->send(new Confirmed($user));
+
+	   	    return view('emails.confirmed')->with('user',$user);
+
+    	}else{
+
+    		abort(404,'your email address could not be found. You could try registering again.');
+
+    	}
+
+
+    }
+
+    protected function setUserWasVerified($user){
+
+    		//set verified and token to null, set subscribed to true.
+    		$user->token = null;
+    		$user->verified = true;
+    		$user->save();
 
     }
 }

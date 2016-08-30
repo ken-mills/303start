@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    @include('head')
+    @include('partials.head')
 
     <link rel="stylesheet" href="{{asset('css/default.css')}}">
 
@@ -253,7 +253,7 @@
         </div>
     </div>
 
-    @include('footer')
+    @include('partials.footer')
 
 </div>
 

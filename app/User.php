@@ -29,22 +29,30 @@ use Notifiable;
         'password', 'remember_token','token'
     ];
 
-	public function setEmailVerificationToken(){
 
-    	$this->token =  str_random(30);
-
-    	return $this->token;
-
-    }
-
-
-	public function scopeUnVerified($query)
+	public function scopeIsUnverified($query)
     {
         return $query->where('verified', '=', false);
     }
 
+	public function scopeHasToken($query)
+    {
+        return $query->whereNotNull('token');
+    }
+
+    public function scopeTokenEquals($query, $token)
+    {
+        return $query->where('token', $token);
+    }
+
     public function subscriptions(){
         return $this->hasMany('App\Subscription');
+    }
+
+    public static function boot(){
+
+    	parent::boot();
+
     }
 
 
