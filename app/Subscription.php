@@ -15,7 +15,7 @@ class Subscription extends Model
 
 
 	protected $fillable = [
-        'user_id','name','confirmed_at'
+        'user_id','name','confirmed_at','subscribed'
     ];
 
     /**

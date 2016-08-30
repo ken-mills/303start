@@ -19,10 +19,6 @@ class SubscriptionController extends Controller
     public function store(Request $request){
 
 
-		//$rules = array('test' => array('size:5', 'regex:foo'));
-
-		Log::debug('subscriptionController:store:Got here 1');
-
 		$this->validate($request, [
 			'first_name' => 'required|max:255',
 			'last_name' => 'required|max:255',
@@ -30,8 +26,6 @@ class SubscriptionController extends Controller
 		]);
 
 		$new_user = new User();
-
-		Log::debug('subscriptionController:store:email = '.$request->input('email'));
 
 		$new_user->email = $request->input('email');
 		$new_user->first_name = $request->input('first_name');
@@ -41,10 +35,9 @@ class SubscriptionController extends Controller
 
 		$subscription = $new_user->subscriptions()->create([
 			'name' => 'MAILING_LIST',
+			'subscribed' => true
 		]);
-/*
- *		5.3 version of mail
- */
+
 		Mail::to($new_user)
 			->send(new Confirmation($subscription,$new_user));
 

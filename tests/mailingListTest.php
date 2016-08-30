@@ -38,11 +38,9 @@ class MailingList extends TestCase
 				->seeEmailTo($user->email)
 				->seeEmailFrom("postmaster@303start.com");
 
-		$same_user = App\User::where(['email' => $user->email])->first();
+		$same_user = App\User::where(['email' => $user->email])->firstOrFail();
 
-		$this->seeInDatabase('users', ['email' => $same_user->email, 'token' => $same_user->token]);
-
-		$this->seeInDatabase('subscriptions', ['user_id' => $same_user->id, 'name' => 'MAILING_LIST']);
+		$this->seeInDatabase('subscriptions', ['user_id' => $same_user->id, 'name' => 'MAILING_LIST', 'subscribed' => true]);
 
 		//checking email for token with database user
 		$this->seeEmailToken($same_user->token);

@@ -162,7 +162,7 @@
                     .then(function (response) {
                         //success
                         this.$broadcast('alert-msg', {
-                            'message': "Thank you " + instance.firstName + "!",
+                            'message': "Thank you " + instance.firstName + "! Please check your inbox and confirm your email address is truly yours.",
                             'type': 'info'
                         });
                         this.showAlert = true;

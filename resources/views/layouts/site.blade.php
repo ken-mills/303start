@@ -288,5 +288,6 @@
         });
     });
 </script>
+@include('partials.google')
 </body>
 </html>
