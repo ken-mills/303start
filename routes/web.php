@@ -22,7 +22,7 @@ Route::get('/', function () {
 })->name('home');
 
 //test route for displaying confirmation email
-Route::get('subscription/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
+//Route::get('subscription/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
 //web route for showing confirmed page
 Route::get('subscription/confirmed', 'EmailConfirmationController@confirmed')->name('confirmed');
 
@@ -31,6 +31,6 @@ Route::get('register/confirm/{token}', 'Auth\RegisterController@confirmEmail')->
 
 
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
