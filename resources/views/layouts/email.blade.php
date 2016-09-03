@@ -8,16 +8,14 @@
 
 <body>
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: sans-serif; font-size: large;">
 
- <tr>
-  <td width="260" valign="top">
+ <tr style="width: 260px;">
+  <td>
    <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-     <td>
-        <a href="{{route("home")}}" >
-          <img src="{{asset('images/303startNoTag.png')}}" alt="303start.com" width="100%" height="140" style="display: block;" />
-        </a>
+     <td style="width: 260px;" valign="top">
+        @include('emails.banner')
      </td>
     </tr>
    </table>
@@ -25,20 +23,24 @@
  </tr>
 
  <tr>
-  <td width="600" valign="top" ">
-   <table border="0" cellpadding="0" cellspacing="0" width="100%" style=" font-size: large;">
+  <td style="width:600px" valign="top">
+   <table border="0" cellpadding="0" cellspacing="0" width="100%" >
     <tr>
+     <td>
         @yield('content')
+     </td>
     </tr>
    </table>
   </td>
  </tr>
 
  <tr>
-  <td width="600" valign="top">
-   <table border="0" cellpadding="0" cellspacing="0" width="100%" style=" font-size: large;">
+  <td style="width:600px" valign="top">
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
+    <td>
         @include('emails.footer_left')
+    </td>
     </tr>
    </table>
   </td>

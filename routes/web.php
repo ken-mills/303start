@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 //test route for displaying confirmation email
 //Route::get('subscription/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
+
 //web route for showing confirmed page
 Route::get('subscription/confirmed', 'EmailConfirmationController@confirmed')->name('confirmed');
 
