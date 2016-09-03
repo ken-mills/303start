@@ -253,6 +253,15 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 text-center">
+
+            @include('partials.footer')
+
+        </div>
+    </div>
+
+
     @include('partials.footer')
 
 </div>

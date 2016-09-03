@@ -5,7 +5,7 @@
 
     @include('partials.head')
 
-    <link rel="stylesheet" href="{{asset('css/default_email.css')}}">
+    <link rel="stylesheet" href="{{asset('css/default_simple.css')}}">
 
 
 </head>
@@ -25,8 +25,6 @@
 
     </div>
 
-
-    @include('partials.google')
 
 </body>
 </html>

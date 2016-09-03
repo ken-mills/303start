@@ -80,8 +80,7 @@ class MailingList extends TestCase
 
 		$this->visit('register/confirm/'.$user->token)
 			->see('Your email address has been confirmed.')
-			->seeInDatabase('users',['id' => $user->id, 'token' => null, 'verified' => true ])
-			->seeEmailContains('Your email address has been confirmed');
+			->seeInDatabase('users',['id' => $user->id, 'token' => null, 'verified' => true ]);
 
 
     }

@@ -35,6 +35,11 @@ use Notifiable;
         return $query->where('verified', '=', false);
     }
 
+	public function scopeIsVerified($query)
+    {
+        return $query->where('verified', '=', true);
+    }
+
 	public function scopeHasToken($query)
     {
         return $query->whereNotNull('token');

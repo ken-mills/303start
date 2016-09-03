@@ -81,14 +81,11 @@ class RegisterController extends Controller
 
 			$this->setUserWasVerified($user);
 
-			Mail::to($user)
-				->send(new Confirmed($user));
-
-	   	    return view('emails.confirmed')->with('user',$user);
+	   	    return view('partials.confirmed')->with('user',$user);
 
     	}else{
 
-    		abort(404,'your email address could not be found. You could try registering again.');
+    		abort(404,'your email address could not be found. You may have already confirmed your email. If not, you could try registering again.');
 
     	}
 

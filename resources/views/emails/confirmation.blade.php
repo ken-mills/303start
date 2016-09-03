@@ -1,12 +1,16 @@
-@extends('layouts.simple')
+@extends('layouts.email')
 
 @section('content')
 
-    <p>Hello {{$user->first_name}},</p>
+    <p>
+        Hello {{$user->first_name}},
+    </p>
 
-    <p>Thank you for joining the 303start.com mailing list.
+    <p>
+    Thank you for joining the <a href="{{route('home')}}">303start.com</a> mailing list.
     Please click on the button below to confirm your email address. If you did not request to join our mailing list,
-    please ignore this message.</p>
+    please ignore this message.
+    </p>
 
     <table border="0" cellpadding="0" cellspacing="0" style="background-color:#428bca; border:1px solid #428bca; border-radius:5px;">
         <tr>
@@ -16,7 +20,11 @@
         </tr>
     </table>
 
-    <p style="margin-top:10px">--Ken</p>
+    </p>
+
+    <p>
+        --Ken
+    </p>
 
 @endsection
 

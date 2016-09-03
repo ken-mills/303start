@@ -39,6 +39,6 @@ class Confirmed extends Mailable
         return $this->from('postmaster@303start.com', '303start.com')
         ->bcc('admin@303start.com')
         ->subject('Thank you!')
-        ->view('emails.confirmed')->with('user',$this->user);
+        ->view('partials.confirmed')->with('user',$this->user);
     }
 }
