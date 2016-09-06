@@ -37,6 +37,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapWebRoutes();
 
+        $this->mapWebLocalRoutes();
+
         $this->mapApiRoutes();
 
         $this->mapApiExposedRoutes();
@@ -58,6 +60,17 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/web.php');
+        });
+    }
+
+    protected function mapWebLocalRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'local'],
+            'namespace' => $this->namespace,
+            'prefix' => 'web',
+        ], function ($router) {
+            require base_path('routes/webLocal.php');
         });
     }
 
@@ -88,4 +101,6 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('routes/apiExposed.php');
         });
     }
+
+
 }

@@ -10,12 +10,15 @@
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: sans-serif; font-size: large;">
 
- <tr style="width: 260px;">
+ <tr>
   <td>
    <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-     <td style="width: 260px;" valign="top">
+     <td style="width: 160px;" valign="top">
         @include('emails.banner')
+     </td>
+     <td>
+        &nbsp;
      </td>
     </tr>
    </table>
@@ -23,24 +26,30 @@
  </tr>
 
  <tr>
-  <td style="width:600px" valign="top">
+  <td valign="top" style="padding-left: 8px">
    <table border="0" cellpadding="0" cellspacing="0" width="100%" >
     <tr>
      <td>
         @yield('content')
      </td>
+     <td style="width:15%">
+        &nbsp;
+     </td>
     </tr>
    </table>
   </td>
  </tr>
 
  <tr>
-  <td style="width:600px" valign="top">
+  <td style="width:250px; padding-left: 8px" valign="top">
    <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
     <td>
         @include('emails.footer_left')
     </td>
+     <td style="width:15%">
+        &nbsp;
+     </td>
     </tr>
    </table>
   </td>

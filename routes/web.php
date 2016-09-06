@@ -13,7 +13,6 @@
 
 Route::get('/', function () {
 
-//	dd(openssl_get_cert_locations());
 
 	$tok = substr( "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ,
 			mt_rand( 0 ,51 ) ,1 ) .substr( md5( time() ), 1);
@@ -21,16 +20,8 @@ Route::get('/', function () {
     return view('layouts.site')->with(['api_token' => $tok, ]);
 })->name('home');
 
-//test route for displaying confirmation email
-//Route::get('subscription/{subscription}/test/confirm', 'EmailConfirmationController@index')->name('test.confirm');
-
-//web route for showing confirmed page
-Route::get('subscription/confirmed', 'EmailConfirmationController@confirmed')->name('confirmed');
-
 //web route for posting confirmation from email
 Route::get('register/confirm/{token}', 'Auth\RegisterController@confirmEmail')->name('register.confirm');
-
-
 
 //Auth::routes();
 
