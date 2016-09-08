@@ -116,6 +116,7 @@
 
                 for (var k in obj)
                 {
+//                    console.log("key = "  + obj[k]);
                     if (typeof obj[k] == "object" && obj[k] !== null){
 
                         msg = this.parseObject(obj[k], msg);
@@ -183,8 +184,6 @@
                 if(this.goodSubmission()){
 
                     console.log("Submitting Fan!" + this.email);
-                    var msgType = 'info';
-                    var msg = "";
 
                     this.$http.post(this.baseUrl + '/api/subscription', {
                         'first_name': this.firstName,
@@ -193,36 +192,36 @@
                     })
                     .then(function (response) {
                         //success
+
                         if(response.data.status == 'ok' ){
 
-                            msgType = 'info';
-                            msg = "Thank you " + instance.firstName
-                                 + "! Please check your inbox and confirm your email address is truly yours." ;
+                            this.$broadcast('alert-msg', {
+                                'message': "Thank you " + instance.firstName
+                                 + "! Please check your inbox and confirm your email address is truly yours." ,
+                                'type': 'info'
+                            });
+
+                        this.showAlert = true;
 
                         }else{
 
                             var prefix = "Something happened. " + response.data.message + "<br>";
                             var errors = this.parseValidationErrors(response.data.errors);
-                            msg = prefix.concat(errors);
-                            msgType = 'warning';
+
+                            this.$broadcast('alert-msg', {
+                                'message': prefix.concat(errors),
+                                'type': 'warning'
+                            });
+                            this.showAlert = true;
+
 
                         }
-
-                        console.log('msg: ' + msg);
-                        this.$broadcast('alert-msg', {
-                            'message': msg ,
-                            'type': msgType
-                        });
-
-                        this.showAlert = true;
 
                     }, function (response) {
                         //error
 
-                        msg = "Something happened. Please try submitting again or call support. Sorry for the inconvenience."
-
                         this.$broadcast('alert-msg', {
-                            'message': msg ,
+                            'message': "Something happened. Please try submitting again or call support. Sorry for the inconvenience.",
                             'type': 'danger'
                         });
                         this.showAlert = true;

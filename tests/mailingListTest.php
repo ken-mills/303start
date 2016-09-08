@@ -68,8 +68,8 @@ class MailingList extends TestCase
     	$user = App\User::firstOrFail();
 
 		$this->json('POST', 'api/subscription',$user->toArray())
-			->seeJsonEquals([
-                 'email' => ['The email has already been taken.']
+			->seeJson([
+                 'message' => 'The email has already been taken.'
              ]);
 
     }
