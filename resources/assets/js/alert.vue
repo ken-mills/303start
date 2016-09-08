@@ -1,6 +1,6 @@
 <template>
 
-    <div :class="alertClasses">{{ alertMessage }}</div>
+    <div :class="alertClasses">{{{ alertMessage }}}</div>
 
 </template>
 

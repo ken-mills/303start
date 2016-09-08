@@ -112,6 +112,36 @@
 
             },
 
+            parseObject: function(obj,msg){
+
+                for (var k in obj)
+                {
+                    if (typeof obj[k] == "object" && obj[k] !== null){
+
+                        msg = this.parseObject(obj[k], msg);
+
+                    }
+                    else{
+
+                        // do something...
+                        if(k == "message" ) {
+                            msg = msg + obj[k] + "<br>";
+                        }
+
+                    }
+                }
+
+                return msg;
+            },
+
+            parseValidationErrors: function(data){
+
+                var msg = "";
+
+                return this.parseObject(data,msg);
+
+            },
+
             goodSubmission: function(){
 
                 var instance = this; //can't reference this in callbacks
@@ -153,6 +183,8 @@
                 if(this.goodSubmission()){
 
                     console.log("Submitting Fan!" + this.email);
+                    var msgType = 'info';
+                    var msg = "";
 
                     this.$http.post(this.baseUrl + '/api/subscription', {
                         'first_name': this.firstName,
@@ -161,15 +193,36 @@
                     })
                     .then(function (response) {
                         //success
+                        if(response.data.status == 'ok' ){
+
+                            msgType = 'info';
+                            msg = "Thank you " + instance.firstName
+                                 + "! Please check your inbox and confirm your email address is truly yours." ;
+
+                        }else{
+
+                            var prefix = "Something happened. " + response.data.message + "<br>";
+                            var errors = this.parseValidationErrors(response.data.errors);
+                            msg = prefix.concat(errors);
+                            msgType = 'warning';
+
+                        }
+
+                        console.log('msg: ' + msg);
                         this.$broadcast('alert-msg', {
-                            'message': "Thank you " + instance.firstName + "! Please check your inbox and confirm your email address is truly yours.",
-                            'type': 'info'
+                            'message': msg ,
+                            'type': msgType
                         });
+
                         this.showAlert = true;
+
                     }, function (response) {
                         //error
+
+                        msg = "Something happened. Please try submitting again or call support. Sorry for the inconvenience."
+
                         this.$broadcast('alert-msg', {
-                            'message': "Something happened. Please call and we will add you to our mailing list.",
+                            'message': msg ,
                             'type': 'danger'
                         });
                         this.showAlert = true;

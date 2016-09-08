@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Log;
 use Mail;
+use Validator;
+
 use App\User;
 use App\Subscription;
 use App\Mail\Confirmation;
-use Log;
-use Carbon\Carbon;
 
 use App\Http\Requests;
 
@@ -19,11 +21,24 @@ class SubscriptionController extends Controller
     public function store(Request $request){
 
 
-		$this->validate($request, [
+        $validator = Validator::make($request->all(), [
 			'first_name' => 'required|max:255',
 			'last_name' => 'required|max:255',
 			'email' => 'bail|required|unique:users|max:255',
-		]);
+        ]);
+
+        if ($validator->fails()) {
+
+        	$data = [
+						'status' => 'error',
+						'message' => 'Validation failed!',
+						'errors' => $validator->errors()
+					];
+
+			return response()->json( $data , 200);
+
+        }
+
 
 		$new_user = new User();
 
@@ -41,7 +56,7 @@ class SubscriptionController extends Controller
 		Mail::to($new_user)
 			->send(new Confirmation($subscription,$new_user));
 
-		return response()->json($new_user);
+		return response()->json(['status' => 'ok' , 'data' => $new_user]);
     }
 
     public function destroy(Request $request){

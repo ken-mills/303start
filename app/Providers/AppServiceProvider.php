@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Validators\RestValidator;
 use App\User;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,6 +21,12 @@ class AppServiceProvider extends ServiceProvider
     		$user->token = str_random(30);
 
     	});
+
+        \Validator::resolver(function($translator, $data, $rules, $messages)
+        {
+            return new RestValidator($translator, $data, $rules, $messages);
+        });
+
 
     }
 
