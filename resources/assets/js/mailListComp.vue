@@ -185,43 +185,61 @@
 
                     console.log("Submitting Fan!" + this.email);
 
+/*
+                     this.$http.get('/image.jpg').then((response) => {
+
+                        // resolve to Blob
+                        return response.blob();
+
+                      }).then(blob) => {
+                        // use image Blob
+                      });
+*/
+
                     this.$http.post(this.baseUrl + '/api/subscription', {
                         'first_name': this.firstName,
                         'last_name': this.lastName,
                         'email': this.email,
                     })
-                    .then(function (response) {
+                    .then((response) => {
                         //success
 
-                        if(response.data.status == 'ok' ){
+                        console.log(response.json());
+                        var jm = response.json();
+
+                        if(jm.status == 'ok' ){
 
                             this.$broadcast('alert-msg', {
-                                'message': "Thank you " + instance.firstName
-                                 + "! Please check your inbox and confirm your email address is truly yours." ,
+                                'message': 'Thanks for joining our mailing list! ' + '<br>' +
+                                'Please check your email inbox and confirm your email address.',
                                 'type': 'info'
                             });
 
-                        this.showAlert = true;
-
                         }else{
 
-                            var prefix = "Something happened. " + response.data.message + "<br>";
-                            var errors = this.parseValidationErrors(response.data.errors);
+                            var prefix = 'Whoops, validation failed! ' + '<br>' ;
+                            var errorList = this.parseValidationErrors(jm.errors);
 
                             this.$broadcast('alert-msg', {
-                                'message': prefix.concat(errors),
+                                'message': prefix.concat(errorList),
                                 'type': 'warning'
                             });
-                            this.showAlert = true;
-
 
                         }
 
-                    }, function (response) {
+                        this.showAlert = true;
+
+                    }, (response) => {
                         //error
 
                         this.$broadcast('alert-msg', {
-                            'message': "Something happened. Please try submitting again or call support. Sorry for the inconvenience.",
+                            'message': 'Whoops, something happened. error code = ' +
+                                    response.status +
+                                    ' Please try submitting again or emailing ' +
+                                    '<a href="mailto:support@303start.com">' +
+                                    ' support ' +
+                                    '</a>.' +
+                                    ' Sorry for the inconvenience.',
                             'type': 'danger'
                         });
                         this.showAlert = true;

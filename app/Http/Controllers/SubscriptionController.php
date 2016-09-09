@@ -31,7 +31,6 @@ class SubscriptionController extends Controller
 
         	$data = [
 						'status' => 'error',
-						'message' => 'Validation failed!',
 						'errors' => $validator->errors()
 					];
 
@@ -56,7 +55,12 @@ class SubscriptionController extends Controller
 		Mail::to($new_user)
 			->send(new Confirmation($subscription,$new_user));
 
-		return response()->json(['status' => 'ok' , 'data' => $new_user]);
+		$data = [
+					'status' => 'ok',
+					'user' => $new_user
+				];
+
+		return response()->json($data, 200);
     }
 
     public function destroy(Request $request){

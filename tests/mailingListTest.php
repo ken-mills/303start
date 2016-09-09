@@ -33,6 +33,12 @@ class MailingList extends TestCase
 		//try ->dump();
 		$this->json('POST', 'api/subscription',$user->toArray())
 				->seeJson([ 'email' => $user->email])
+				->seeJsonStructure([
+					 'status',
+					 'user' => [
+						 'created_at', 'email','first_name', 'last_name', 'id'
+					 ]
+				 ])
 				->seeEmailWasSent()
 				->seeEmailContains('register/confirm/')
 				->seeEmailTo($user->email)
@@ -70,7 +76,12 @@ class MailingList extends TestCase
 		$this->json('POST', 'api/subscription',$user->toArray())
 			->seeJson([
                  'message' => 'The email has already been taken.'
-             ]);
+             ])
+			->seeJsonStructure([
+					 'status',
+					 'errors'
+				 ])
+;
 
     }
 
