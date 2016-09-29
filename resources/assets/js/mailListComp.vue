@@ -43,13 +43,13 @@
 </style>
 <script>
 
-    var Alert = require('./alert.vue');
+    var Alert = require('vue-alert303');
 
     export default{
 
         props: ['baseUrl', 'apiToken'],
 
-        data(){
+        data: function(){
             return {
                 firstName: '',
                 lastName: '',
@@ -184,17 +184,6 @@
                 if(this.goodSubmission()){
 
                     console.log("Submitting Fan!" + this.email);
-
-/*
-                     this.$http.get('/image.jpg').then((response) => {
-
-                        // resolve to Blob
-                        return response.blob();
-
-                      }).then(blob) => {
-                        // use image Blob
-                      });
-*/
 
                     this.$http.post(this.baseUrl + '/api/subscription', {
                         'first_name': this.firstName,
