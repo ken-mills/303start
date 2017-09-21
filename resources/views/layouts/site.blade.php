@@ -54,6 +54,7 @@
 <header id="top" class="top-image fill home text-center">
     <img src="{{asset('images/303startNoTag.png')}}" class="img-responsive img-rounded center-block">
     <h2 class="tag-line">providing a framework and software to engage employees and teams</h2>
+    <h3><a style="color:lightgrey;" href="#news">join our mailing list</a></h3>
 </header>
 
 <!-- Services -->
@@ -224,7 +225,7 @@
 
 <div id="news" class="call-out" style="background-image: url('{{ asset('images/CycleRoad1080.jpg')}}')">
     <div class="text-vertical-center news">
-        <h2>team303 release coming soon<br>want to learn more? call 484.886.4263 </h2>
+        <h2>team303 coming soon</h2>
         @include('partials.mailinglist')
     </div>
 </div>

@@ -173,6 +173,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         //database backup support
         Spatie\Backup\BackupServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class
 
     ],
 

@@ -1,4 +1,3 @@
 <p style="margin-top: 10px">
-	<a class="text-primary" href="mailto:info@303start.com">info@303start.com</a>
+	<a class="text-primary" href="mailto:ken@303start.com">ken@303start.com</a>
 </p>
-<p>484.886.4263</p>
