@@ -1,2 +1,2 @@
-<p>Need help? Email support<a href="mailto:support@303start.com">, support@303start.com</a></p>
+<p>Need help? Email support<a href="mailto:ken@303start.com">, ken@303start.com</a></p>
 

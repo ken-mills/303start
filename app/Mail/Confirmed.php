@@ -37,7 +37,7 @@ class Confirmed extends Mailable
 		Log::debug('Confirmed:build:user = '.$this->user->email);
 
         return $this->from('postmaster@303start.com', '303start.com')
-        ->bcc('admin@303start.com')
+        ->bcc('ken@303start.com')
         ->subject('Thank you!')
         ->view('partials.confirmed')->with('user',$this->user);
     }
