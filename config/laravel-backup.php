@@ -76,12 +76,12 @@ return [
             /*
              * The amount of days that all daily backups must be kept.
              */
-            'keepDailyBackupsForDays' => 16,
+            'keepDailyBackupsForDays' => 8,
 
             /*
              * The amount of weeks of which one weekly backup must be kept.
              */
-            'keepWeeklyBackupsForWeeks' => 8,
+            'keepWeeklyBackupsForWeeks' => 4,
 
             /*
              * The amount of months of which one monthly backup must be kept.
@@ -97,7 +97,7 @@ return [
              * After cleaning up the backups remove the oldest backup until
              * this amount of megabytes has been reached.
              */
-            'deleteOldestBackupsWhenUsingMoreMegabytesThan' => 5000,
+            'deleteOldestBackupsWhenUsingMoreMegabytesThan' => 1000,
         ],
     ],
 
@@ -112,7 +112,7 @@ return [
             'name' => env('APP_URL'),
             'disks' => ['local'],
             'newestBackupsShouldNotBeOlderThanDays' => 1,
-            'storageUsedMayNotBeHigherThanMegabytes' => 5000,
+            'storageUsedMayNotBeHigherThanMegabytes' => 1000,
         ],
 
         /*
