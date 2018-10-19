@@ -4,7 +4,9 @@
 
 var Vue = require('vue');
 
-Vue.use(require('vue-resource'));
+window.axios = require('axios');
+Vue.prototype.$http = axios;
+
 
 var MailList = require('./mailListComp.vue');
 
@@ -14,9 +16,13 @@ new Vue({
 
 el:'#maillist-app',
 
-ready: function(){
+mounted: function(){
 
+  this.$nextTick(function () {
+    // Code that will run only after the
+    // entire view has been rendered
     console.log('Vue is ready!');
+  })
 
 }
 

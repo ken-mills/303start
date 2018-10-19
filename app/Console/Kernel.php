@@ -38,5 +38,8 @@ class Kernel extends ConsoleKernel
         // $this->command('build {project}', function ($project) {
         //     $this->info('Building project...');
         // });
+
+        $this->load(__DIR__.'/Commands');
+
     }
 }

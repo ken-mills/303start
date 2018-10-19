@@ -6,7 +6,9 @@
           <input type="hidden" id="hpot" placeholder="This field is not required. Please ignore." v-model="hPot" maxlength="5">
 
           <div class="col-sm-4 col-sm-offset-4">
-              <alert303 v-show="showAlert"></alert303>
+              <b-alert :show="showAlert" :variant="msgVariant">
+                 {{message}}
+              </b-alert>
           </div>
 
           <div class="form-group">
@@ -43,7 +45,7 @@
 </style>
 <script>
 
-    var Alert = require('vue-alert303');
+    import bAlert from 'bootstrap-vue/es/components/alert/alert';
 
     export default{
 
@@ -55,17 +57,22 @@
                 lastName: '',
                 email: '',
                 hPot: '',
+
                 showAlert: false,
+                message: '',
+                msgVariant: 'primary'
             }
         },
 
-        ready: function () {
-
-            console.log('maillist is ready!');
-            console.log(this.baseUrl);
-            console.log(this.email);
-
-        },
+         mounted: function () {
+           this.$nextTick(function () {
+             // Code that will run only after the
+             // entire view has been rendered
+               console.log('maillist is ready!');
+               console.log(this.baseUrl);
+               console.log(this.email);
+           })
+         },
 
         http: {
             headers: {
@@ -74,7 +81,7 @@
         },
 
         components: {
-            alert303: Alert
+            bAlert: bAlert
         },
 
         methods: {
@@ -179,7 +186,7 @@
 
             submitFan: function (e) {
 
-                var instance = this;
+                var _this = this;
 
                 if(this.goodSubmission()){
 
@@ -198,21 +205,17 @@
 
                         if(jm.status == 'ok' ){
 
-                            this.$broadcast('alert-msg', {
-                                'message': 'Thanks for joining our mailing list! ' + '<br>' +
-                                'Please check your email inbox and confirm your email address.',
-                                'type': 'info'
-                            });
+                            _this.message = 'Thanks for joining our mailing list! ' + '<br>' +
+                                'Please check your email inbox and confirm your email address.';
+                            _this.msgVariant = 'info';
 
                         }else{
 
                             var prefix = 'Whoops, validation failed! ' + '<br>' ;
                             var errorList = this.parseValidationErrors(jm.errors);
 
-                            this.$broadcast('alert-msg', {
-                                'message': prefix.concat(errorList),
-                                'type': 'warning'
-                            });
+                            _this.message = prefix.concat(errorList);
+                            _this.msgVariant = 'warning';
 
                         }
 
@@ -221,16 +224,14 @@
                     }, (response) => {
                         //error
 
-                        this.$broadcast('alert-msg', {
-                            'message': 'Whoops, something happened. error code = ' +
+                        this.message = 'Whoops, something happened. error code = ' +
                                     response.status +
                                     ' Please try submitting again or emailing ' +
                                     '<a href="mailto:support@303start.com">' +
                                     ' support ' +
                                     '</a>.' +
-                                    ' Sorry for the inconvenience.',
-                            'type': 'danger'
-                        });
+                                    ' Sorry for the inconvenience.';
+                        this.msgVariant = 'danger';
                         this.showAlert = true;
                     });
 
