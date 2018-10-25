@@ -1,5 +1,4 @@
 let mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -13,5 +12,7 @@ let mix = require('laravel-mix');
 
 mix.disableNotifications();
 
-mix.js('resources/assets/js/mailListComp.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix
+	.setResourceRoot("")
+	.js('resources/assets/js/main.js', 'public/js')
+	.sass('resources/assets/sass/app.scss', 'public/css');

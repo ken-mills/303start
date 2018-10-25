@@ -1,5 +1,9 @@
 <template>
-    <div>
+
+<div id="news" class="call-out" style="background-image: url(images/CycleRoad1080.jpg)">
+    <div class="text-vertical-center news">
+        <h2>team303 coming soon</h2>
+
         <h2>Join our mailing list!</h2>
         <form role="form" class="form-horizontal" method="POST" v-on:submit.prevent="submitFan">
 
@@ -39,7 +43,11 @@
           </div>
 
         </form>
+
+
     </div>
+</div>
+
 </template>
 <style>
 </style>
@@ -49,7 +57,7 @@
 
     export default{
 
-        props: ['baseUrl', 'apiToken'],
+        props: ['apiToken'],
 
         data: function(){
             return {
@@ -69,16 +77,9 @@
              // Code that will run only after the
              // entire view has been rendered
                console.log('maillist is ready!');
-               console.log(this.baseUrl);
                console.log(this.email);
            })
          },
-
-        http: {
-            headers: {
-                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-            }
-        },
 
         components: {
             bAlert: bAlert
