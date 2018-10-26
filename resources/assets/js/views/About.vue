@@ -16,13 +16,9 @@
 
             <h2 class="text-primary">about 303start</h2>
 
-            <p>{{message}}</p>
+            <p class="mb-2">{{message}}</p>
 
-				<h4><strong>Contact 303start</strong></h4>
-				<p style="margin-top: 10px">
-					<a class="text-primary" href="mailto:ken@303start.com">ken@303start.com</a>
-				</p>
-				<br>
+			  <p><strong>Contact 303start:</strong> <a class="text-primary" href="mailto:ken@303start.com">ken@303start.com</a></p>
 
         </div>
     </div>
@@ -38,8 +34,7 @@
 		      message: '303start is the home of team303. team303 was created with the goal of making ' +
 		       'performance management easier. many organizations want the same thing. ' +
 		        'team303 has evolved into more than just a performance management tool. ' +
-		         'it is an alternative resource for supervisors, managers, and leaders to engage contributors in today’s workplace. ' +
-		          'team303 helps to build strong relationships between players and coaches.'
+		         'it is an alternative resource for supervisors, managers, and leaders to engage contributors in today’s workplace.'
 		  }
 		}
 	}

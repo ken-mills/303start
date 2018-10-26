@@ -165,6 +165,7 @@ hr {
 .top-image img {
   width: 100%;
   height: auto;
+  max-width: 600px;
   align-self: center;
 }
 
@@ -227,10 +228,6 @@ hr {
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-.btn-spacing {
-  margin-bottom: 20px;
-}
-
 .popup303 {
   text-align: left;
 }
@@ -251,7 +248,7 @@ hr {
 }
 
 .table-303 {
-  padding: 5% 10% 0% 10%;
+  padding: 2% 5% 0% 5%;
   margin-left: auto;
   margin-right: auto;
   font-size: large;
@@ -302,6 +299,11 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .ddItem{
+    display: none;
+  }
+
   .table-303 {
     display: none;
   }

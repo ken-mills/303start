@@ -1,6 +1,6 @@
 <template>
 
-	<div id="app-container">
+	<div id="app-container" >
 
 				<transition
 						name="fade"
@@ -11,9 +11,7 @@
 
 				<router-view name="nav"></router-view>
 
-		<footer class="text-center">
-			&copy; 303start.com
-		</footer>
+				<footer class="fixed-bottom text-center">	&copy; 303start.com 2018</footer>
 
 	</div>
 
@@ -41,15 +39,5 @@
 </script>
 
 <style scoped>
-	.fade-enter-active,
-	.fade-leave-active {
-		transition-duration: 0.3s;
-		transition-property: opacity;
-		transition-timing-function: ease;
-	}
 
-	.fade-enter,
-	.fade-leave-active {
-		opacity: 0
-	}
 </style>

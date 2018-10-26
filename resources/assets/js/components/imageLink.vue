@@ -2,11 +2,9 @@
 
 	<div class="col-xs-12 col-sm-3">
 
-		<img v-bind:style="backgroundSrc" class="img-circle icon-303"/>
+		<a href="#" v-on:click="sendClick()">
+		<img v-bind:style="backgroundSrc" class="img-circle icon-303"/></a>
 		<h4>{{title}}</h4>
-		<div class="btn-spacing">
-			<button :id="id" v-on:click="sendClick($event)" class="btn btn-default">learn more</button>
-		</div>
 
 	</div>
 
@@ -31,7 +29,7 @@
 
 		methods: {
 			sendClick: function(e){
-				this.$emit('click',e.target.id);
+				this.$emit('click',this.id);
 			}
 		}
 	}
