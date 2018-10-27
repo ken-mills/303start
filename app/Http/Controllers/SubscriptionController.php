@@ -21,7 +21,13 @@ class SubscriptionController extends Controller
     public function store(Request $request){
 
 
-        $validator = Validator::make($request->all(), [
+		$request->validate( [
+			'first_name' => 'required|max:255',
+			'last_name' => 'required|max:255',
+			'email' => 'bail|required|unique:users|max:255',
+      ]);
+
+        /*$validator = Validator::make($request->all(), [
 			'first_name' => 'required|max:255',
 			'last_name' => 'required|max:255',
 			'email' => 'bail|required|unique:users|max:255',
@@ -36,7 +42,7 @@ class SubscriptionController extends Controller
 
 			return response()->json( $data , 200);
 
-        }
+        }*/
 
 
 		$new_user = new User();

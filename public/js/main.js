@@ -13856,7 +13856,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13927,7 +13927,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	components: {},
 	data: function data() {
 		return {
-			baseUrl: '/',
 			apiToken: '',
 			prevHeight: 0
 		};
@@ -21266,7 +21265,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__imageLink__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__imageLink__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__imageLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__imageLink__);
 //
 //
@@ -21365,14 +21364,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		this.$nextTick(function () {
 			// Code that will run only after the
 			// entire view has been rendered
-			console.log('team303Overview is ready!');
+			//console.log('team303Overview is ready!');
 		});
 	},
 
 	methods: {
 		showText: function showText(id) {
 
-			console.log('attribute clicked: ' + id);
+			//console.log('attribute clicked: ' + id);
 			this.displayId = parseInt(id);
 		}
 	}
@@ -21380,11 +21379,179 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(65)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(67)
+/* template */
+var __vue_template__ = __webpack_require__(68)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-9bdf9524"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/imageLink.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9bdf9524", Component.options)
+  } else {
+    hotAPI.reload("data-v-9bdf9524", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(66);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("e9ac4866", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9bdf9524\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./imageLink.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9bdf9524\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./imageLink.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	name: "team303-attribute",
+	props: ['id', 'title', 'imageSrc'],
+	components: {},
+	data: function data() {
+		return {};
+	},
+
+	mounted: function mounted() {},
+	watch: {},
+	computed: {
+		backgroundSrc: function backgroundSrc() {
+			return { 'background-image': 'url(' + this.imageSrc + ')' };
+		}
+	},
+
+	methods: {
+		sendClick: function sendClick(e) {
+			this.$emit('click', this.id);
+		}
+	}
+});
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-xs-12 col-sm-3" }, [
+    _c(
+      "a",
+      {
+        attrs: { href: "#" },
+        on: {
+          click: function($event) {
+            _vm.sendClick()
+          }
+        }
+      },
+      [
+        _c("img", {
+          staticClass: "img-circle icon-303",
+          style: _vm.backgroundSrc
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c("h4", [_vm._v(_vm._s(_vm.title))])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9bdf9524", module.exports)
+  }
+}
+
+/***/ }),
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21633,162 +21800,174 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-    props: ['apiToken'],
+	props: ['apiToken'],
 
-    data: function data() {
-        return {
-            firstName: '',
-            lastName: '',
-            email: '',
-            hPot: '',
+	data: function data() {
+		return {
+			firstName: '',
+			lastName: '',
+			email: '',
+			hPot: '',
 
-            showAlert: false,
-            message: '',
-            msgVariant: 'primary'
-        };
-    },
+			showAlert: false,
+			message: '',
+			msgVariant: 'primary'
+		};
+	},
 
-    mounted: function mounted() {
-        this.$nextTick(function () {
-            // Code that will run only after the
-            // entire view has been rendered
-            console.log('maillist is ready!');
-            console.log(this.email);
-        });
-    },
+	mounted: function mounted() {
+		this.$nextTick(function () {
+			// Code that will run only after the
+			// entire view has been rendered
+			console.log('maillist is ready!');
+			console.log(this.email);
+		});
+	},
 
-    components: {
-        bAlert: __WEBPACK_IMPORTED_MODULE_0_bootstrap_vue_es_components_alert_alert__["a" /* default */]
-    },
+	components: {
+		bAlert: __WEBPACK_IMPORTED_MODULE_0_bootstrap_vue_es_components_alert_alert__["a" /* default */]
+	},
 
-    methods: {
+	methods: {
 
-        checkForHoney: function checkForHoney(pot) {
+		checkForHoney: function checkForHoney(pot) {
 
-            if (pot) {
+			if (pot) {
 
-                console.log('Found some honey');
-                return true;
-            }
+				console.log('Found some honey');
+				return true;
+			}
 
-            return false;
-        },
+			return false;
+		},
 
-        validateEmail: function validateEmail(email) {
-            if (email) {
+		validateEmail: function validateEmail(email) {
+			if (email) {
 
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {} else {
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {} else {
 
-                    return 'The email address does not appear to be valid. Please try again, thanks!';
-                }
-            } else {
+					return 'The email address does not appear to be valid. Please try again, thanks!';
+				}
+			} else {
 
-                return 'Please, enter an email address';
-            }
+				return 'Please, enter an email address';
+			}
 
-            return null;
-        },
+			return null;
+		},
 
-        parseObject: function parseObject(obj, msg) {
+		parseObject: function parseObject(obj, msg) {
 
-            for (var k in obj) {
-                //                    console.log("key = "  + obj[k]);
-                if (_typeof(obj[k]) == "object" && obj[k] !== null) {
+			console.log("parseObject:  ", obj);
+			for (var k in obj) {
+				console.log("key = " + obj[k]);
+				if (_typeof(obj[k]) == "object" && obj[k] !== null) {
 
-                    msg = this.parseObject(obj[k], msg);
-                } else {
+					msg = this.parseObject(obj[k], msg);
+				} else {
 
-                    // do something...
-                    if (k == "message") {
-                        msg = msg + obj[k] + "<br>";
-                    }
-                }
-            }
+					// do something...
+					if (k == "message") {
+						msg = msg + obj[k] + "<br>";
+					}
+				}
+			}
 
-            return msg;
-        },
+			return msg;
+		},
 
-        parseValidationErrors: function parseValidationErrors(data) {
+		parseValidationErrors: function parseValidationErrors(data) {
 
-            var msg = "";
+			var msg = "";
 
-            return this.parseObject(data, msg);
-        },
+			Object.values(data).forEach(function (element) {
+				console.log(element);
+				msg = msg + ' ' + element;
+			});
 
-        goodSubmission: function goodSubmission() {
+			return msg;
+		},
 
-            var instance = this; //can't reference this in callbacks
+		goodSubmission: function goodSubmission() {
 
-            if (this.checkForHoney(this.hPot)) {
+			var _this = this; //can't reference this in callbacks
 
-                this.$http.post(this.baseUrl + '/api/log', { msg: "Honey pot had data, ignoring post request" });
+			if (this.checkForHoney(this.hPot)) {
 
-                this.hpot = '';
+				this.$http.post(this.baseUrl + '/api/log', { msg: "Honey pot had data, ignoring post request" });
 
-                return false; //Don't do anything.
-            } else {
+				this.hpot = '';
 
-                var msg = this.validateEmail(this.email);
+				return false; //Don't do anything.
+			} else {
 
-                if (msg) {
+				var msg = this.validateEmail(this.email);
 
-                    instance.$broadcast('alert-msg', {
-                        'message': msg,
-                        'type': 'danger'
-                    });
+				if (msg) {
 
-                    instance.showAlert = true;
+					_this.message = msg;
+					_this.msgVariant = 'danger';
 
-                    return false;
-                }
-            }
+					_this.showAlert = true;
 
-            return true;
-        },
+					return false;
+				}
+			}
 
-        submitFan: function submitFan(e) {
-            var _this2 = this;
+			return true;
+		},
 
-            var _this = this;
+		submitFan: function submitFan(e) {
 
-            if (this.goodSubmission()) {
+			var _this = this;
 
-                console.log("Submitting Fan!" + this.email);
+			if (this.goodSubmission()) {
 
-                this.$http.post(this.baseUrl + '/api/subscription', {
-                    'first_name': this.firstName,
-                    'last_name': this.lastName,
-                    'email': this.email
-                }).then(function (response) {
-                    //success
+				console.log("Submitting Fan!" + this.email);
 
-                    console.log(response.json());
-                    var jm = response.json();
+				this.$http.post('/api/subscription', {
+					'first_name': this.firstName,
+					'last_name': this.lastName,
+					'email': this.email
+				}).then(function (response) {
+					//success
+					console.log('Post response: ', response);
 
-                    if (jm.status == 'ok') {
+					if (response.data.status === 'ok') {
 
-                        _this.message = 'Thanks for joining our mailing list! ' + '<br>' + 'Please check your email inbox and confirm your email address.';
-                        _this.msgVariant = 'info';
-                    } else {
+						_this.message = 'Thanks for joining our mailing list! ' + 'Please check your email inbox and confirm your email address.';
+						_this.msgVariant = 'info';
+					}
 
-                        var prefix = 'Whoops, validation failed! ' + '<br>';
-                        var errorList = _this2.parseValidationErrors(jm.errors);
-
-                        _this.message = prefix.concat(errorList);
-                        _this.msgVariant = 'warning';
-                    }
-
-                    _this2.showAlert = true;
-                }, function (response) {
-                    //error
-
-                    _this2.message = 'Whoops, something happened. error code = ' + response.status + ' Please try submitting again or emailing ' + '<a href="mailto:support@303start.com">' + ' support ' + '</a>.' + ' Sorry for the inconvenience.';
-                    _this2.msgVariant = 'danger';
-                    _this2.showAlert = true;
-                });
-            }
-        }
-    }
+					_this.showAlert = true;
+				}).catch(function (error) {
+					//error
+					if (error.response) {
+						// The request was made and the server responded with a status code
+						// that falls out of the range of 2xx
+						console.log(error.response.status);
+						_this.message = _this.parseValidationErrors(error.response.data.errors);
+						_this.msgVariant = 'danger';
+						_this.showAlert = true;
+					} else if (error.request) {
+						// The request was made but no response was received
+						// `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+						// http.ClientRequest in node.js
+						_this.message = 'Whoops, nothing happened. No response from server.' + ' Please try submitting again or emailing support@303start.com.' + ' Sorry for the inconvenience.';
+						_this.msgVariant = 'danger';
+						_this.showAlert = true;
+					} else {
+						// Something happened in setting up the request that triggered an Error
+						_this.message = 'Whoops, bad request.';
+						_this.msgVariant = 'danger';
+						_this.showAlert = true;
+						console.log('Error', error.message);
+					}
+					console.log(error.config);
+				});
+			}
+		}
+	}
 
 });
 
@@ -22093,13 +22272,7 @@ var render = function() {
                 _c(
                   "b-alert",
                   { attrs: { show: _vm.showAlert, variant: _vm.msgVariant } },
-                  [
-                    _vm._v(
-                      "\r\n                 " +
-                        _vm._s(_vm.message) +
-                        "\r\n              "
-                    )
-                  ]
+                  [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.message) + "\n\t\t\t\t")]
                 )
               ],
               1
@@ -23274,187 +23447,6 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
-/* 106 */,
-/* 107 */,
-/* 108 */,
-/* 109 */,
-/* 110 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(111)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(113)
-/* template */
-var __vue_template__ = __webpack_require__(114)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-9bdf9524"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/imageLink.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9bdf9524", Component.options)
-  } else {
-    hotAPI.reload("data-v-9bdf9524", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(112);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(3)("e9ac4866", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9bdf9524\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./imageLink.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9bdf9524\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./imageLink.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 112 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 113 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-	name: "team303-attribute",
-	props: ['id', 'title', 'imageSrc'],
-	components: {},
-	data: function data() {
-		return {};
-	},
-
-	mounted: function mounted() {},
-	watch: {},
-	computed: {
-		backgroundSrc: function backgroundSrc() {
-			return { 'background-image': 'url(' + this.imageSrc + ')' };
-		}
-	},
-
-	methods: {
-		sendClick: function sendClick(e) {
-			this.$emit('click', this.id);
-		}
-	}
-});
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-xs-12 col-sm-3" }, [
-    _c(
-      "a",
-      {
-        attrs: { href: "#" },
-        on: {
-          click: function($event) {
-            _vm.sendClick()
-          }
-        }
-      },
-      [
-        _c("img", {
-          staticClass: "img-circle icon-303",
-          style: _vm.backgroundSrc
-        })
-      ]
-    ),
-    _vm._v(" "),
-    _c("h4", [_vm._v(_vm._s(_vm.title))])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-9bdf9524", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);

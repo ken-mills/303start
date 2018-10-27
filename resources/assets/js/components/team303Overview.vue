@@ -100,14 +100,14 @@
 			this.$nextTick(function () {
 				// Code that will run only after the
 				// entire view has been rendered
-				console.log('team303Overview is ready!');
+				//console.log('team303Overview is ready!');
 			})
 		},
 
 		methods: {
 			showText: function (id) {
 
-				console.log('attribute clicked: ' + id);
+				//console.log('attribute clicked: ' + id);
 				this.displayId = parseInt(id);
 
 			}

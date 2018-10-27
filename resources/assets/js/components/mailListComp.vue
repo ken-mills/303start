@@ -1,245 +1,254 @@
 <template>
 
-<div id="news" class="call-out" style="background-image: url(images/CycleRoad1080.jpg)">
-    <div class="text-vertical-center news">
-        <h2>team303 coming soon</h2>
+	<div id="news" class="call-out" style="background-image: url(images/CycleRoad1080.jpg)">
+		<div class="text-vertical-center news">
+			<h2>team303 coming soon</h2>
 
-        <h2>Join our mailing list!</h2>
-        <form role="form" class="form-horizontal" method="POST" v-on:submit.prevent="submitFan">
+			<h2>Join our mailing list!</h2>
+			<form role="form" class="form-horizontal" method="POST" v-on:submit.prevent="submitFan">
 
-          <input type="hidden" id="hpot" placeholder="This field is not required. Please ignore." v-model="hPot" maxlength="5">
+				<input type="hidden" id="hpot" placeholder="This field is not required. Please ignore." v-model="hPot" maxlength="5">
 
-          <div class="col-sm-4 col-sm-offset-4">
-              <b-alert :show="showAlert" :variant="msgVariant">
-                 {{message}}
-              </b-alert>
-          </div>
+				<div class="col-sm-4 col-sm-offset-4">
+					<b-alert :show="showAlert" :variant="msgVariant">
+						{{message}}
+					</b-alert>
+				</div>
 
-          <div class="form-group">
-            <label for="fName" class="sr-only">First Name:</label>
-            <div class="col-sm-4 col-sm-offset-4">
-                <input type="text" class="form-control" id="fName" placeholder="First name:" v-model="firstName" maxlength="250">
-            </div>
-          </div>
+				<div class="form-group">
+					<label for="fName" class="sr-only">First Name:</label>
+					<div class="col-sm-4 col-sm-offset-4">
+						<input type="text" class="form-control" id="fName" placeholder="First name:" v-model="firstName" maxlength="250">
+					</div>
+				</div>
 
-          <div class="form-group">
-            <label for="lName" class="sr-only">Last Name:</label>
-            <div class="col-sm-4 col-sm-offset-4">
-                <input type="text" class="form-control" id="lName" placeholder="Last name:" v-model="lastName" maxlength="250">
-            </div>
-          </div>
+				<div class="form-group">
+					<label for="lName" class="sr-only">Last Name:</label>
+					<div class="col-sm-4 col-sm-offset-4">
+						<input type="text" class="form-control" id="lName" placeholder="Last name:" v-model="lastName" maxlength="250">
+					</div>
+				</div>
 
-          <div class="form-group">
-            <label for="email" class="sr-only">Email:</label>
-            <div class="col-sm-4 col-sm-offset-4">
-                <input type="text" class="form-control" id="email" placeholder="Email:" v-model="email" maxlength="250">
-            </div>
-          </div>
+				<div class="form-group">
+					<label for="email" class="sr-only">Email:</label>
+					<div class="col-sm-4 col-sm-offset-4">
+						<input type="text" class="form-control" id="email" placeholder="Email:" v-model="email" maxlength="250">
+					</div>
+				</div>
 
-           <div class="form-group">
-            <div class="col-sm-4 col-sm-offset-4">
-              <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-          </div>
+				<div class="form-group">
+					<div class="col-sm-4 col-sm-offset-4">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div>
 
-        </form>
+			</form>
 
 
-    </div>
-</div>
+		</div>
+	</div>
 
 </template>
 <style>
 </style>
 <script>
 
-    import bAlert from 'bootstrap-vue/es/components/alert/alert';
+	import bAlert from 'bootstrap-vue/es/components/alert/alert';
 
-    export default{
+	export default {
 
-        props: ['apiToken'],
+		props: ['apiToken'],
 
-        data: function(){
-            return {
-                firstName: '',
-                lastName: '',
-                email: '',
-                hPot: '',
+		data: function () {
+			return {
+				firstName: '',
+				lastName: '',
+				email: '',
+				hPot: '',
 
-                showAlert: false,
-                message: '',
-                msgVariant: 'primary'
-            }
-        },
+				showAlert: false,
+				message: '',
+				msgVariant: 'primary'
+			}
+		},
 
-         mounted: function () {
-           this.$nextTick(function () {
-             // Code that will run only after the
-             // entire view has been rendered
-               console.log('maillist is ready!');
-               console.log(this.email);
-           })
-         },
+		mounted: function () {
+			this.$nextTick(function () {
+				// Code that will run only after the
+				// entire view has been rendered
+				console.log('maillist is ready!');
+				console.log(this.email);
+			})
+		},
 
-        components: {
-            bAlert: bAlert
-        },
+		components: {
+			bAlert: bAlert
+		},
 
-        methods: {
+		methods: {
 
-            checkForHoney: function ( pot ) {
+			checkForHoney: function (pot) {
 
-                if (pot) {
+				if (pot) {
 
-                    console.log('Found some honey');
-                    return true;
+					console.log('Found some honey');
+					return true;
 
-                }
+				}
 
-                return false;
+				return false;
 
-            },
+			},
 
-            validateEmail: function (email) {
-                if(email) {
+			validateEmail: function (email) {
+				if (email) {
 
-                    if( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+					if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 
-                    }else{
+					} else {
 
-                        return 'The email address does not appear to be valid. Please try again, thanks!';
+						return 'The email address does not appear to be valid. Please try again, thanks!';
 
-                    }
+					}
 
-                }else{
+				} else {
 
-                    return 'Please, enter an email address';
-                }
+					return 'Please, enter an email address';
+				}
 
-                return null;
+				return null;
 
-            },
+			},
 
-            parseObject: function(obj,msg){
+			parseObject: function (obj, msg) {
 
-                for (var k in obj)
-                {
-//                    console.log("key = "  + obj[k]);
-                    if (typeof obj[k] == "object" && obj[k] !== null){
+				console.log("parseObject:  ", obj);
+				for (var k in obj) {
+					console.log("key = " + obj[k]);
+					if (typeof obj[k] == "object" && obj[k] !== null) {
 
-                        msg = this.parseObject(obj[k], msg);
+						msg = this.parseObject(obj[k], msg);
 
-                    }
-                    else{
+					}
+					else {
 
-                        // do something...
-                        if(k == "message" ) {
-                            msg = msg + obj[k] + "<br>";
-                        }
+						// do something...
+						if (k == "message") {
+							msg = msg + obj[k] + "<br>";
+						}
 
-                    }
-                }
+					}
+				}
 
-                return msg;
-            },
+				return msg;
+			},
 
-            parseValidationErrors: function(data){
+			parseValidationErrors: function (data) {
 
-                var msg = "";
+				var msg = "";
 
-                return this.parseObject(data,msg);
+				Object.values(data).forEach(function(element) {
+				  	console.log(element);
+				  	msg = msg + ' ' + element;
+				});
 
-            },
+				return msg;
 
-            goodSubmission: function(){
+			},
 
-                var instance = this; //can't reference this in callbacks
+			goodSubmission: function () {
 
-                if(this.checkForHoney(this.hPot)) {
+				var _this = this; //can't reference this in callbacks
 
-                    this.$http.post(this.baseUrl + '/api/log', {msg: "Honey pot had data, ignoring post request"});
+				if (this.checkForHoney(this.hPot)) {
 
-                    this.hpot = '';
+					this.$http.post(this.baseUrl + '/api/log', {msg: "Honey pot had data, ignoring post request"});
 
-                    return false; //Don't do anything.
+					this.hpot = '';
 
-                }else{
+					return false; //Don't do anything.
 
-                    var msg = this.validateEmail(this.email);
+				} else {
 
-                    if(msg){
+					var msg = this.validateEmail(this.email);
 
-                        instance.$broadcast('alert-msg', {
-                            'message': msg,
-                            'type': 'danger'
-                        });
+					if (msg) {
 
-                        instance.showAlert = true;
+						_this.message = msg;
+						_this.msgVariant = 'danger';
 
-                        return false;
+						_this.showAlert = true;
 
-                    }
-                }
+						return false;
 
-                return true;
+					}
+				}
 
-            },
+				return true;
 
-            submitFan: function (e) {
+			},
 
-                var _this = this;
+			submitFan: function (e) {
 
-                if(this.goodSubmission()){
+				var _this = this;
 
-                    console.log("Submitting Fan!" + this.email);
+				if (this.goodSubmission()) {
 
-                    this.$http.post(this.baseUrl + '/api/subscription', {
-                        'first_name': this.firstName,
-                        'last_name': this.lastName,
-                        'email': this.email,
-                    })
-                    .then((response) => {
-                        //success
+					console.log("Submitting Fan!" + this.email);
 
-                        console.log(response.json());
-                        var jm = response.json();
+					this.$http.post('/api/subscription', {
+						'first_name': this.firstName,
+						'last_name': this.lastName,
+						'email': this.email
+					})
+						.then(function (response) {
+							//success
+							console.log('Post response: ', response);
 
-                        if(jm.status == 'ok' ){
 
-                            _this.message = 'Thanks for joining our mailing list! ' + '<br>' +
-                                'Please check your email inbox and confirm your email address.';
-                            _this.msgVariant = 'info';
+							if (response.data.status === 'ok') {
 
-                        }else{
+								_this.message = 'Thanks for joining our mailing list! ' +
+									'Please check your email inbox and confirm your email address.';
+								_this.msgVariant = 'info';
 
-                            var prefix = 'Whoops, validation failed! ' + '<br>' ;
-                            var errorList = this.parseValidationErrors(jm.errors);
+							}
 
-                            _this.message = prefix.concat(errorList);
-                            _this.msgVariant = 'warning';
+							_this.showAlert = true;
 
-                        }
+						}).catch(function (error) {
+						//error
+						if (error.response) {
+							// The request was made and the server responded with a status code
+							// that falls out of the range of 2xx
+							console.log(error.response.status);
+							_this.message = _this.parseValidationErrors(error.response.data.errors);
+							_this.msgVariant = 'danger';
+							_this.showAlert = true;
 
-                        this.showAlert = true;
+						} else if (error.request) {
+							// The request was made but no response was received
+							// `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+							// http.ClientRequest in node.js
+							_this.message = 'Whoops, nothing happened. No response from server.' +
+								' Please try submitting again or emailing support@303start.com.' +
+								' Sorry for the inconvenience.';
+							_this.msgVariant = 'danger';
+							_this.showAlert = true;
+						} else {
+							// Something happened in setting up the request that triggered an Error
+							_this.message = 'Whoops, bad request.';
+							_this.msgVariant = 'danger';
+							_this.showAlert = true;
+							console.log('Error', error.message);
+						}
+ 						console.log(error.config);
+					});
 
-                    }, (response) => {
-                        //error
+				}
+			}
+		}
 
-                        this.message = 'Whoops, something happened. error code = ' +
-                                    response.status +
-                                    ' Please try submitting again or emailing ' +
-                                    '<a href="mailto:support@303start.com">' +
-                                    ' support ' +
-                                    '</a>.' +
-                                    ' Sorry for the inconvenience.';
-                        this.msgVariant = 'danger';
-                        this.showAlert = true;
-                    });
-
-                }
-            }
-        }
-
-    }
+	}
 
 </script>

@@ -25,7 +25,6 @@
 		components: {},
 		data() {
 			return {
-				baseUrl: '/',
 				apiToken: '',
 				prevHeight: 0,
 			}
