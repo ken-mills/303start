@@ -26,7 +26,7 @@
 		<!-- /.row (nested) -->
 		<div class="row text-center">
 			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-				<div class="popup303 text-center" title="Attributes">
+				<div class="popup303 text-justify" title="Attributes">
 					<!-- Relationships -->
 					<p v-if="displayId === 1" id="pp1">A foundation for creating an excellent company is an investment in people. Knowledge, skills, and
 						attitude are important competencies to develop and monitor. team303 does that but organizations
