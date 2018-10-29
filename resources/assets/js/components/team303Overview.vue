@@ -25,29 +25,27 @@
 		</div>
 		<!-- /.row (nested) -->
 		<div class="row text-center">
-			<div class="col-12">
-				<div class="popup303" title="Attributes">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+				<div class="popup303 text-center" title="Attributes">
 					<!-- Relationships -->
-					<p v-if="displayId === 1" id="pp1">a foundation for creating an excellent company is an investment in people. knowledge, skills, and
+					<p v-if="displayId === 1" id="pp1">A foundation for creating an excellent company is an investment in people. Knowledge, skills, and
 						attitude are important competencies to develop and monitor. team303 does that but organizations
 						often forget to invest in and nurture the relationships between people, between supervisors and
-						employees, between executives and managers, or between coaches and players. the team303 design was based on
+						employees, between executives and managers, or between team leaders and team members. The team303 design was based on
 						this core principle. team303 provides tools to develop strong, transparent, mentoring relationships
 						between people.</p>
 					<!-- Simplicity -->
-					<p v-else-if="displayId === 2" id="pp2">organizations everywhere including many in the Fortune 500 have decided to trash their bureaucratic,
-						paper based, time sucking, performance managements systems. why? organizations are moving too fast.
-						these systems were designed for a different era. many organizations are now simply asking their
+					<p v-else-if="displayId === 2" id="pp2">Organizations everywhere including many in the Fortune 500 have decided to trash their bureaucratic,
+						paper based, time sucking, performance managements systems. Why? Organizations are moving too fast.
+						These systems were designed for a different era. Many organizations are now simply asking their
 						managers and supervisors to meet with staff more frequently, communicate more, and create more time
-						for mentoring but with what tools? how do your leaders know this is actually happening? team303
+						for mentoring but with what tools? How do your leaders know this is actually happening? team303
 						provides the toolbox to help supervisors engage with their teams. team303 provides your organization's leaders with a window
 						into how their employees are engaging, in light, fun, and non-threatening ways.</p>
 					<!-- Fun -->
-					<p v-else-if="displayId === 3" id="pp3">team303 provides an optional player/coach metaphor to take the work out of the language used to engage players.
-						team303 allows players and coaches to become a "pro" at engaging using a
-						point system. you can customize the scoring.</p>
+					<p v-else-if="displayId === 3" id="pp3">team303 integrates gaming concepts to make employee engagement fun. Employees earn points when they engage with your organization.</p>
 					<p v-else-if="displayId === 4" id="pp4">team303 has optional components that allow your organization to select and customize an employee
-						engagement system that fits your culture. you decide which components and features are right for
+						engagement system that fits your culture. You decide which components and features are right for
 						your organization.</p>
 				</div>
 			</div>

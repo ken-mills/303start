@@ -17006,8 +17006,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	name: "features"
@@ -17061,7 +17059,8 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass: "fa fa-eye fa-3x text-primary"
+                            staticClass:
+                              "fas fa-exchange-alt fa-3x text-primary"
                           })
                         ]
                       ),
@@ -17072,7 +17071,7 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("pre-game")])]
+                        [_c("strong", [_vm._v("Discuss")])]
                       ),
                       _vm._v(" "),
                       _c(
@@ -17080,7 +17079,7 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _vm._v(
-                            "\n                            the pre-game provides coaches and players with a template agenda for a meeting at the\n                            beginning of the engagement period. you define when that period starts and ends for your organization.\n                            the pregame is a set of simple questions that focus on how both can work together more\n                            effectively. you can customize the template for your organization. players capture notes to prepare for the\n                            meeting.\n                        "
+                            "\n                            Discuss how you and your employee will work to improve your working relationships in the coming year. team303 provides a template agenda\n                            The template contains a set of simple questions that focus discussion on how you and your team member can work together more\n                            effectively. you can customize the template for your organization. Capture notes before and after the meeting.\n                        "
                           )
                         ]
                       )
@@ -17092,7 +17091,8 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass: "fa fa-futbol-o fa-3x text-primary"
+                            staticClass:
+                              "far fa-3x fa-calendar-alt text-primary"
                           })
                         ]
                       ),
@@ -17103,12 +17103,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("winning")])]
+                        [_c("strong", [_vm._v("Plan")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            a simple way to capture player goals. use this tool to promote transparent communication and discussion.\n                            pre-set character limits and instructions that you can customize. no paper forms.\n\n                        "
+                          "\n                            A simple way to capture team member goals. Use this tool to promote transparent communication and discussion.\n                            You define pre-set templates, character limits, and instructions to help make the your fast and painless. No paper forms.\n\n                        "
                         )
                       ])
                     ]),
@@ -17131,12 +17131,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("training camp")])]
+                        [_c("strong", [_vm._v("Learn")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            identify and record player training goals to help your organization build an inventory of knowledge and skills.\n                        "
+                          "\n                            Identify and record training goals to help your organization build an inventory of knowledge and skills.\n                        "
                         )
                       ])
                     ]),
@@ -17147,8 +17147,7 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass:
-                              "fa fa-calendar-check-o fa-3x text-primary"
+                            staticClass: "far fa-3x fa-edit text-primary"
                           })
                         ]
                       ),
@@ -17159,12 +17158,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("huddle")])]
+                        [_c("strong", [_vm._v("Note")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            quickly document results of frequent discussions. how are we working together? how are you\n                            progressing toward your organizational and training goals? what can you do to improve effectiveness?\n                            what is in your way?\n                            document discussions for improvement or new ideas. don't wait until the end of the year to find out when its too late.\n                        "
+                          "\n                            Quickly document results of frequent discussions. How are we working together? How are you\n                            progressing toward your organizational and training goals? What can you do to improve effectiveness?\n                            What is in your way?\n                            Document discussions for improvement or new ideas. Don't wait until the end of the year to find out that its too late.\n                        "
                         )
                       ])
                     ]),
@@ -17175,7 +17174,7 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass: "fa fa-lightbulb-o fa-3x text-primary"
+                            staticClass: "far fa-lightbulb fa-3x text-primary"
                           })
                         ]
                       ),
@@ -17186,12 +17185,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("ideas")])]
+                        [_c("strong", [_vm._v("Ideate")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            innovative ideas can be nurtured in more than just a suggestion box. players like to know their ideas\n                            are being heard and shared. players need to understand the steps required to make new product ideas a\n                            reality. this tool provides a simple framework for vetting and supporting ideas within your\n                            organization.\n                        "
+                          "\n                            Innovative ideas can be nurtured in more than just a suggestion box. Employees like to know their ideas\n                            are being heard and shared. They need to understand the steps required to make new product ideas a\n                            reality. This tool provides a simple framework for vetting and supporting ideas within your\n                            organization.\n                        "
                         )
                       ])
                     ]),
@@ -17202,7 +17201,7 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass: "fa fa-comments fa-3x text-primary"
+                            staticClass: "fas fa-share-alt fa-3x text-primary"
                           })
                         ]
                       ),
@@ -17213,12 +17212,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("the wave")])]
+                        [_c("strong", [_vm._v("Share")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            reward your players for engaging. the wave generates a stream of player activity like a log file and a badge\n                            system that promotes engagement, communication, and player development. visualize in real-time how players\n                            are engaging. use the data to enhance your own player engagement programs.\n                        "
+                          "\n                            Reward your players for engaging. The river generates a stream of player activity like a log and a badge\n                            system that promotes engagement, communication, and player development. Visualize in real-time how players\n                            are engaging. Use the data to enhance your own player engagement programs.\n                        "
                         )
                       ])
                     ]),
@@ -17229,7 +17228,7 @@ var staticRenderFns = [
                         { staticStyle: { "vertical-align": "middle" } },
                         [
                           _c("i", {
-                            staticClass: "fa fa-list fa-3x text-primary"
+                            staticClass: "fas fa-chart-line fa-3x text-primary"
                           })
                         ]
                       ),
@@ -17240,12 +17239,12 @@ var staticRenderFns = [
                           staticClass: "wider",
                           staticStyle: { "vertical-align": "middle" }
                         },
-                        [_c("strong", [_vm._v("scorecard")])]
+                        [_c("strong", [_vm._v("Report")])]
                       ),
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          "\n                            you just killed your old performance management system but your team leader still wants information, who is\n                            talking? who is growing? review an inventory of organizational skills, skills being developed. see how players are\n                            engaging.\n                        "
+                          "\n                            You just killed your old performance management system but your CEO still wants information. Who is\n                            meeting? Who is growing? Review an inventory of organizational skills, skills being developed. See how employees are\n                            engaging.\n                        "
                         )
                       ])
                     ])
@@ -21254,7 +21253,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -21267,8 +21266,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__imageLink__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__imageLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__imageLink__);
-//
-//
 //
 //
 //
@@ -21576,33 +21573,36 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "row text-center" }, [
-        _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "col-xs-12 col-sm-8 col-sm-offset-2" }, [
           _c(
             "div",
-            { staticClass: "popup303", attrs: { title: "Attributes" } },
+            {
+              staticClass: "popup303 text-center",
+              attrs: { title: "Attributes" }
+            },
             [
               _vm.displayId === 1
                 ? _c("p", { attrs: { id: "pp1" } }, [
                     _vm._v(
-                      "a foundation for creating an excellent company is an investment in people. knowledge, skills, and\r\n\t\t\t\t\t\tattitude are important competencies to develop and monitor. team303 does that but organizations\r\n\t\t\t\t\t\toften forget to invest in and nurture the relationships between people, between supervisors and\r\n\t\t\t\t\t\temployees, between executives and managers, or between coaches and players. the team303 design was based on\r\n\t\t\t\t\t\tthis core principle. team303 provides tools to develop strong, transparent, mentoring relationships\r\n\t\t\t\t\t\tbetween people."
+                      "A foundation for creating an excellent company is an investment in people. Knowledge, skills, and\r\n\t\t\t\t\t\tattitude are important competencies to develop and monitor. team303 does that but organizations\r\n\t\t\t\t\t\toften forget to invest in and nurture the relationships between people, between supervisors and\r\n\t\t\t\t\t\temployees, between executives and managers, or between team leaders and team members. The team303 design was based on\r\n\t\t\t\t\t\tthis core principle. team303 provides tools to develop strong, transparent, mentoring relationships\r\n\t\t\t\t\t\tbetween people."
                     )
                   ])
                 : _vm.displayId === 2
                   ? _c("p", { attrs: { id: "pp2" } }, [
                       _vm._v(
-                        "organizations everywhere including many in the Fortune 500 have decided to trash their bureaucratic,\r\n\t\t\t\t\t\tpaper based, time sucking, performance managements systems. why? organizations are moving too fast.\r\n\t\t\t\t\t\tthese systems were designed for a different era. many organizations are now simply asking their\r\n\t\t\t\t\t\tmanagers and supervisors to meet with staff more frequently, communicate more, and create more time\r\n\t\t\t\t\t\tfor mentoring but with what tools? how do your leaders know this is actually happening? team303\r\n\t\t\t\t\t\tprovides the toolbox to help supervisors engage with their teams. team303 provides your organization's leaders with a window\r\n\t\t\t\t\t\tinto how their employees are engaging, in light, fun, and non-threatening ways."
+                        "Organizations everywhere including many in the Fortune 500 have decided to trash their bureaucratic,\r\n\t\t\t\t\t\tpaper based, time sucking, performance managements systems. Why? Organizations are moving too fast.\r\n\t\t\t\t\t\tThese systems were designed for a different era. Many organizations are now simply asking their\r\n\t\t\t\t\t\tmanagers and supervisors to meet with staff more frequently, communicate more, and create more time\r\n\t\t\t\t\t\tfor mentoring but with what tools? How do your leaders know this is actually happening? team303\r\n\t\t\t\t\t\tprovides the toolbox to help supervisors engage with their teams. team303 provides your organization's leaders with a window\r\n\t\t\t\t\t\tinto how their employees are engaging, in light, fun, and non-threatening ways."
                       )
                     ])
                   : _vm.displayId === 3
                     ? _c("p", { attrs: { id: "pp3" } }, [
                         _vm._v(
-                          'team303 provides an optional player/coach metaphor to take the work out of the language used to engage players.\r\n\t\t\t\t\t\tteam303 allows players and coaches to become a "pro" at engaging using a\r\n\t\t\t\t\t\tpoint system. you can customize the scoring.'
+                          "team303 integrates gaming concepts to make employee engagement fun. Employees earn points when they engage with your organization."
                         )
                       ])
                     : _vm.displayId === 4
                       ? _c("p", { attrs: { id: "pp4" } }, [
                           _vm._v(
-                            "team303 has optional components that allow your organization to select and customize an employee\r\n\t\t\t\t\t\tengagement system that fits your culture. you decide which components and features are right for\r\n\t\t\t\t\t\tyour organization."
+                            "team303 has optional components that allow your organization to select and customize an employee\r\n\t\t\t\t\t\tengagement system that fits your culture. You decide which components and features are right for\r\n\t\t\t\t\t\tyour organization."
                           )
                         ])
                       : _vm._e()

@@ -9,67 +9,65 @@
                 <table class="table" align="center" summary="List of team303 components and features">
                     <tbody>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-eye fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>pre-game</strong></td>
+                        <td style="vertical-align:middle"><i class="fas fa-exchange-alt fa-3x text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Discuss</strong></td>
                         <td style="vertical-align:middle">
-                            the pre-game provides coaches and players with a template agenda for a meeting at the
-                            beginning of the engagement period. you define when that period starts and ends for your organization.
-                            the pregame is a set of simple questions that focus on how both can work together more
-                            effectively. you can customize the template for your organization. players capture notes to prepare for the
-                            meeting.
+                            Discuss how you and your employee will work to improve your working relationships in the coming year. team303 provides a template agenda
+                            The template contains a set of simple questions that focus discussion on how you and your team member can work together more
+                            effectively. you can customize the template for your organization. Capture notes before and after the meeting.
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-futbol-o fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>winning</strong></td>
+                        <td style="vertical-align:middle"><i class="far fa-3x fa-calendar-alt text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Plan</strong></td>
                         <td>
-                            a simple way to capture player goals. use this tool to promote transparent communication and discussion.
-                            pre-set character limits and instructions that you can customize. no paper forms.
+                            A simple way to capture team member goals. Use this tool to promote transparent communication and discussion.
+                            You define pre-set templates, character limits, and instructions to help make the your fast and painless. No paper forms.
 
                         </td>
                     </tr>
                     <tr>
                         <td style="vertical-align:middle"><i class="fa fa-graduation-cap fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>training camp</strong></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Learn</strong></td>
                         <td>
-                            identify and record player training goals to help your organization build an inventory of knowledge and skills.
+                            Identify and record training goals to help your organization build an inventory of knowledge and skills.
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-calendar-check-o fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>huddle</strong></td>
+                        <td style="vertical-align:middle"><i class="far fa-3x fa-edit text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Note</strong></td>
                         <td>
-                            quickly document results of frequent discussions. how are we working together? how are you
-                            progressing toward your organizational and training goals? what can you do to improve effectiveness?
-                            what is in your way?
-                            document discussions for improvement or new ideas. don't wait until the end of the year to find out when its too late.
+                            Quickly document results of frequent discussions. How are we working together? How are you
+                            progressing toward your organizational and training goals? What can you do to improve effectiveness?
+                            What is in your way?
+                            Document discussions for improvement or new ideas. Don't wait until the end of the year to find out that its too late.
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-lightbulb-o fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>ideas</strong></td>
+                        <td style="vertical-align:middle"><i class="far fa-lightbulb fa-3x text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Ideate</strong></td>
                         <td>
-                            innovative ideas can be nurtured in more than just a suggestion box. players like to know their ideas
-                            are being heard and shared. players need to understand the steps required to make new product ideas a
-                            reality. this tool provides a simple framework for vetting and supporting ideas within your
+                            Innovative ideas can be nurtured in more than just a suggestion box. Employees like to know their ideas
+                            are being heard and shared. They need to understand the steps required to make new product ideas a
+                            reality. This tool provides a simple framework for vetting and supporting ideas within your
                             organization.
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-comments fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>the wave</strong></td>
+                        <td style="vertical-align:middle"><i class="fas fa-share-alt fa-3x text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Share</strong></td>
                         <td>
-                            reward your players for engaging. the wave generates a stream of player activity like a log file and a badge
-                            system that promotes engagement, communication, and player development. visualize in real-time how players
-                            are engaging. use the data to enhance your own player engagement programs.
+                            Reward your players for engaging. The river generates a stream of player activity like a log and a badge
+                            system that promotes engagement, communication, and player development. Visualize in real-time how players
+                            are engaging. Use the data to enhance your own player engagement programs.
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:middle"><i class="fa fa-list fa-3x text-primary"></i></td>
-                        <td style="vertical-align:middle" class="wider"><strong>scorecard</strong></td>
+                        <td style="vertical-align:middle"><i class="fas fa-chart-line fa-3x text-primary"></i></td>
+                        <td style="vertical-align:middle" class="wider"><strong>Report</strong></td>
                         <td>
-                            you just killed your old performance management system but your team leader still wants information, who is
-                            talking? who is growing? review an inventory of organizational skills, skills being developed. see how players are
+                            You just killed your old performance management system but your CEO still wants information. Who is
+                            meeting? Who is growing? Review an inventory of organizational skills, skills being developed. See how employees are
                             engaging.
                         </td>
                     </tr>
