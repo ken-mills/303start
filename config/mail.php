@@ -55,8 +55,10 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
-
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'admin@303start.com'),
+        'name' => env('MAIL_FROM_NAME', 'Admin'),
+    ],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

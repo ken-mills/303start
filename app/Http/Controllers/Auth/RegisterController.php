@@ -77,7 +77,7 @@ class RegisterController extends Controller
 
     	$user = User::tokenEquals($token)->first();
 
-    	if(count($user)){
+    	if($user){
 
 			$this->setUserWasVerified($user);
 

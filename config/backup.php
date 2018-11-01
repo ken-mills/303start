@@ -108,9 +108,9 @@ return [
             \Spatie\Backup\Notifications\Notifications\BackupHasFailed::class         => ['mail'],
             \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFound::class => ['mail'],
             \Spatie\Backup\Notifications\Notifications\CleanupHasFailed::class        => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessful::class     => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFound::class   => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessful::class    => ['mail'],
+            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessful::class     => [],
+            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFound::class   => [],
+            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessful::class    => [],
         ],
 
         /*
@@ -121,7 +121,8 @@ return [
 
         'mail' => [
             'to' => 'ken@303start.com',
-        ],
+            'from' => 'admin@303start.com'
+         ],
 
         'slack' => [
             'webhook_url' => '',

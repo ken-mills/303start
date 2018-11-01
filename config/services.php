@@ -27,8 +27,10 @@ return [
 
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
+        'options' => [
+            'endpoint' => 'https://api.sparkpost.com/api/v1/transmissions',
+        ],
     ],
-
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
