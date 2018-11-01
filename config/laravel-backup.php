@@ -86,12 +86,12 @@ return [
             /*
              * The amount of months of which one monthly backup must be kept.
              */
-            'keepMonthlyBackupsForMonths' => 4,
+            'keepMonthlyBackupsForMonths' => 2,
 
             /*
              * The amount of years of which one yearly backup must be kept.
              */
-            'keepYearlyBackupsForYears' => 2,
+            'keepYearlyBackupsForYears' => 1,
 
             /*
              * After cleaning up the backups remove the oldest backup until
@@ -153,8 +153,8 @@ return [
          * Here you can specify how emails should be sent.
          */
         'mail' => [
-            'from' => 'your@email.com',
-            'to'   => 'your@email.com',
+            'from' => 'ken@303start.com',
+            'to'   => 'ken@303start.com',
         ],
 
         /*
